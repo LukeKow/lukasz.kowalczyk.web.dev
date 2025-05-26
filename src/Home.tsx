@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Card } from "./components/card/Card";
 
 import me from './assets/images/me.jpeg';
