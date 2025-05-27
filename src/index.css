@@ -11,8 +11,14 @@
 	--color-turquoise-500: #00CFC1;
 	--color-turquoise-600: #009E93;
 	--color-orange-100: #FFFDFA;
+	--color-orange-200: #FFE9C2;
+	--color-orange-300: #FFD894;
 	--color-orange-400: #FFC866;
 	--color-orange-500: #FFB738;
 	--color-orange-600: #EB9600;
+	--color-orange-700: #9E6500;
+	--color-orange-800: #573700;
+	--color-orange-900: #0A0700;
   --font-fira-sans: "Fira Sans", sans-serif;
+	--tw-duration: 5;
 }
