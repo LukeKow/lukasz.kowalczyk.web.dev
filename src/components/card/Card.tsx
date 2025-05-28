@@ -1,4 +1,4 @@
-import { Button } from "../button/Button";
+import { Button } from "../shared/button/Button";
 import { type CardProps } from "./CardTypes";
 
 export const Card = ({ title, name, imgSrc, linkedInLink, linkedInIcon, igLink, igIcon, gmailIcon, mailAddress }: CardProps) => {

@@ -1,4 +1,4 @@
-import { Button } from "../button/Button";
+import { Button } from "../shared/button/Button";
 import { type TextSectionProps } from "./TextSectionTypes";
 
 export const TextSection = ({ header, subheader, body }: TextSectionProps) => {
