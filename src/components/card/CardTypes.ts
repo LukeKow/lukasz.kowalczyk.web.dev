@@ -1,4 +1,5 @@
 export interface CardProps {
+	name: string;
 	title: string;
 	handlePrimaryAction: () => void;
 	handleSecondaryAction: () => void;

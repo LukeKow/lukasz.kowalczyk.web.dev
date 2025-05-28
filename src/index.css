@@ -3,14 +3,17 @@
 
 @theme {
 	--color-blue-100: #FAFCFF;
+	--color-blue-150: #E5F1FF;
 	--color-blue-400: #66AEFF;
 	--color-blue-500: #3795FF;
 	--color-blue-600: #006EEB;
 	--color-turquoise-100: #FAFFFF;
+	--color-turquoise-150: #D1FFFC;
 	--color-turquoise-400: #1AFFEF;
 	--color-turquoise-500: #00CFC1;
 	--color-turquoise-600: #009E93;
 	--color-orange-100: #FFFDFA;
+	--color-orange-150: #FFF2DB;
 	--color-orange-200: #FFE9C2;
 	--color-orange-300: #FFD894;
 	--color-orange-400: #FFC866;
