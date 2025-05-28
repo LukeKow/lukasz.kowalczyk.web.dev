@@ -1,4 +1,6 @@
+import type { Link } from "../../../menuOverlay/MenuOverlayTypes";
+
 export interface MenuProps {
 	color?: string;
-	onClick: () => void;
+	items: Link[];
 }

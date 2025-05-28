@@ -8,12 +8,31 @@ import igIcon from './assets/icons/Instagram.svg';
 import linkedInIcon from './assets/icons/LinkedIn.svg';
 import gmailIcon from './assets/icons/gmail.svg';
 import './home.css';
+import { useRef } from "react";
 
 function App() {
+	const homeRef = useRef(null);
+	const procjectsRef = useRef(null);
+	const resumeRef = useRef(null);
+
 	return (
 		<div>
-			<TopBar name="Łukasz Kowalczyk" />
+			<TopBar name="Łukasz Kowalczyk" menuItems={[
+				{
+					text: 'Projects',
+					ref: procjectsRef
+				},
+				{
+					text: 'Resume',
+					ref: resumeRef
+				},
+				{
+					text: 'Home',
+					ref: homeRef
+				}]}
+			/>
 			<div
+				ref={homeRef}
 				id="home"
 				className="lg:py-30 lg:h-screen lg:block flex flex-col"
 			>
@@ -38,6 +57,16 @@ function App() {
 					/>
 				</section>
 			</div>
+			<section ref={procjectsRef} className="h-100 w-full bg-orange-700">
+				<h2 className="text-3xl text-white">
+					PROJECTS
+				</h2>
+			</section>
+			<section ref={resumeRef} className="h-100 w-full bg-orange-300">
+				<h2 className="text-3xl text-white">
+					RESUME
+				</h2>
+			</section>
 		</div>
 	);
 }
