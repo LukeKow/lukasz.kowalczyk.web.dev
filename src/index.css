@@ -22,7 +22,7 @@
 	--color-orange-700: #9E6500;
 	--color-orange-800: #573700;
 	--color-orange-900: #0A0700;
-  --font-fira-sans: "Fira Sans", sans-serif;
+	--default-font-family: "Fira Sans", sans-serif;
 	--tw-duration: 5;
 	--bg-lr-orange-gradient: linear-gradient(90deg, #FFD894 0%, #FFE9C2 40%, #ffffff 35%, #ffffff 100%);
 	--bg-tb-orange-gradient: linear-gradient(180deg, #fff 0%, #fff 25%, #FFE9C2 25%, #FFE9C2 100%);
