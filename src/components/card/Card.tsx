@@ -4,8 +4,7 @@ import { type CardProps } from "./CardTypes";
 export const Card = ({ title, name, imgSrc, linkedInLink, linkedInIcon, igLink, igIcon, gmailIcon, mailAddress }: CardProps) => {
 	return (
 		<div
-			className="bg-orange-100 shadow-md w-full lg:w-[25%]">
-
+			className="shadow-md w-full lg:w-[25%]">
 			<div className="py-10 px-5 lg:px-20 flex flex-col items-center gap-5 bg-orange-100 shadow-md w-full">
 				<div
 					className={`
@@ -28,7 +27,7 @@ export const Card = ({ title, name, imgSrc, linkedInLink, linkedInIcon, igLink, 
 					<Button color="orange" variant="outlined" label="PROJECTS" onClick={() => { }} />
 				</div>
 			</div>
-			<div className="flex py-5 gap-20 bg-white w-full justify-center">
+			<div className="flex py-5 px-5 gap-10 lg:gap-20 bg-white w-full justify-center [&>a]:rounded-xs [&>a]:p-[5px] [&>a]:hover:bg-orange-100">
 				<a href={igLink}>
 					<img src={igIcon} />
 				</a>
@@ -40,7 +39,6 @@ export const Card = ({ title, name, imgSrc, linkedInLink, linkedInIcon, igLink, 
 				</a>
 			</div>
 			<div className="bg-orange-100 pb-10">
-
 			</div>
 		</div>
 	);
