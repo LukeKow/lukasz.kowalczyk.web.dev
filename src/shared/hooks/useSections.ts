@@ -1,5 +1,5 @@
-import { createContext, useRef } from "react";
-import type { Link } from "../../menuOverlay/MenuOverlayTypes";
+import { useRef } from "react";
+import type { Link } from "../../components/menuOverlay/MenuOverlayTypes";
 
 export type Section = "Skills" | "Experience" | "Home";
 export type SectionsRecordsMap = Record<Section, Link>;
