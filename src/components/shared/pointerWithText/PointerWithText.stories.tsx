@@ -1,16 +1,16 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 
-import { PointerWithText } from './PointerWithText';
+import { PointerWithText } from "./PointerWithText";
 
 const meta: Meta<typeof PointerWithText> = {
-	component: PointerWithText,
+  component: PointerWithText,
 };
 
 export default meta;
 type Story = StoryObj<typeof PointerWithText>;
 
 export const Primary: Story = {
-	args: {
-		text: "Dummy text"
-	},
+  args: {
+    text: "Dummy text",
+  },
 };

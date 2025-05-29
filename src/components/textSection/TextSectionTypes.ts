@@ -1,5 +1,5 @@
 export interface TextSectionProps {
-	header: string;
-	subheader: string;
-	body: string;
+  header: string;
+  subheader: string;
+  body: string;
 }
