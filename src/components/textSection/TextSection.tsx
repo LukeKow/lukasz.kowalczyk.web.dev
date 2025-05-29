@@ -19,4 +19,4 @@ export const TextSection = ({ header, subheader, body }: TextSectionProps) => {
 			</p>
 		</section>
 	);
-}
+};

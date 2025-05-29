@@ -4,7 +4,7 @@ import { type MenuProps } from "./MenuTypes";
 import { MenuOverlay } from "../../../menuOverlay/MenuOverlay";
 import { createPortal } from "react-dom";
 
-export const Menu = ({ color, items }: MenuProps) => {
+export const Menu = ({ color }: MenuProps) => {
 	const [isMenuVisible, setIsMenuVisible] = useState(false);
 
 	return (
@@ -25,7 +25,6 @@ export const Menu = ({ color, items }: MenuProps) => {
 			{isMenuVisible &&
 				createPortal(
 					<MenuOverlay
-						items={items}
 						onClose={() => setIsMenuVisible(false)} />,
 					document.body)
 			}

@@ -42,4 +42,4 @@ export const Card = ({ title, name, imgSrc, linkedInLink, linkedInIcon, igLink, 
 			</div>
 		</div>
 	);
-}
+};

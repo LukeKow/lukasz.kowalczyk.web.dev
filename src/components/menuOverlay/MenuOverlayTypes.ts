@@ -1,9 +1,8 @@
 export interface MenuOverlayProps {
-	items: Link[];
-	onClose: () => void;
+  onClose: () => void;
 }
 
 export type Link = {
-	ref: React.RefObject<null>;
-	text: string;
-}
+  ref: React.RefObject<null>;
+  text: string;
+};
