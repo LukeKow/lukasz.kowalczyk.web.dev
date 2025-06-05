@@ -2,11 +2,25 @@
 @import "tailwindcss";
 
 @theme {
+	--color-pink-100: #FFFAFB;
+  --color-pink-200: #FCCFD3;
+  --color-pink-300: #F9A9B0;
+  --color-pink-400: #F7838D;
+  --color-pink-500: #F45B69;
+  --color-pink-600: #EF1024;
+  --color-pink-700: #A30B19;
+  --color-pink-800: #56060D;
+  --color-pink-900: #050001;
   --color-blue-100: #fafcff;
   --color-blue-150: #e5f1ff;
+  --color-blue-200: #cce4ff;
+  --color-blue-300: #99C9FF;
   --color-blue-400: #66aeff;
   --color-blue-500: #3795ff;
   --color-blue-600: #006eeb;
+  --color-blue-700: #004A9E;
+  --color-blue-800: #002957;
+  --color-blue-900: #00050A;
   --color-turquoise-100: #faffff;
   --color-turquoise-150: #d1fffc;
   --color-turquoise-400: #1affef;
@@ -25,18 +39,20 @@
   --color-brown-200: #dad2c9;
   --default-font-family: "Fira Sans", sans-serif;
   --tw-duration: 5;
-  --bg-lr-orange-gradient: linear-gradient(
+  --bg-lr-blue-gradient: linear-gradient(
     90deg,
-    #ffd894 0%,
-    #ffe9c2 40%,
+    var(--color-blue-200) 0%,
+    var(--color-blue-200) 40%,
     #ffffff 35%,
     #ffffff 100%
   );
-  --bg-tb-orange-gradient: linear-gradient(
+  --bg-tb-blue-gradient: linear-gradient(
     180deg,
     #fff 0%,
-    #fff 25%,
-    #ffe9c2 25%,
-    #ffe9c2 100%
+    #fff 10%,
+    var(--color-blue-200) 10%,
+    var(--color-blue-200) 85%,
+		#fff 85%,
+    #fff 100%
   );
 }

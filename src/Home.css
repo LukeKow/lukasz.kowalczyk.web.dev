@@ -1,9 +1,9 @@
-#home {
-  background: var(--bg-tb-orange-gradient);
+#Home {
+  background: var(--bg-tb-blue-gradient);
 }
 
 @media (width >= 64rem /* 1024px */) {
-  #home {
-    background: var(--bg-lr-orange-gradient);
+  #Home {
+    background: var(--bg-lr-blue-gradient);
   }
 }
