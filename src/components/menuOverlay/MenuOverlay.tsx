@@ -1,46 +1,47 @@
-import { useContext } from "react";
-
 import { type MenuOverlayProps } from "./MenuOverlayTypes";
-
-import { SectionsContext } from "../../shared/contexts/sectionContext";
 import { PointerWithText } from "../shared/pointerWithText/PointerWithText";
 
+import backToHome from "../../assets/icons/back-to-home.svg";
 import closeIcon from "../../assets/icons/close-icon.svg";
 
 export const MenuOverlay = ({ onClose }: MenuOverlayProps) => {
-  const sections = useContext(SectionsContext);
-
   const handleItemClick = (
-    ref: React.RefObject<null | HTMLElement>,
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
   ) => {
     e.preventDefault();
-    if (ref.current) {
-      ref.current.scrollIntoView();
-    }
+
     onClose();
   };
   return (
     <div className="fixed top-0 left-0 w-screen h-screen bg-orange-100 flex flex-col justify-between items-center">
-      <div className="w-full flex justify-end px-5 py-5">
+      <div className="w-full flex justify-between px-5 py-5">
         <button
-          className="px-2.5 py-2.5 flex gap-2.5 text-brown-200 hover:cursor-pointer"
+          className="px-2.5 py-2.5 gap-2.5 text-brown-200 hover:cursor-pointer hover:text-brown-900"
+          // TODO add navigation to home page
           onClick={onClose}
         >
-          close <img src={closeIcon} />
+          <img src={backToHome} />
+        </button>
+        <button
+          className="px-2.5 py-2.5 flex items-center gap-2.5 text-brown-200 hover:cursor-pointer"
+          onClick={onClose}
+        >
+          close <img src={closeIcon} className="h-[12px]" />
         </button>
       </div>
       <div className="h-full mb-30 flex flex-col gap-10 justify-center">
-        {sections.map((i, index) => (
-          <a
-            key={index}
-            href=""
-            onClick={(e) => handleItemClick(i.ref, e)}
-            className="hover:-underline-offset-2"
-          >
-            <PointerWithText text={i.text} />
-          </a>
-        ))}
+        <a
+          href=""
+          onClick={(e) => handleItemClick(e)}
+          className="hover:-underline-offset-2"
+        >
+          <PointerWithText
+            text="Projects"
+            pointerColor="blue"
+            fontType="subheader"
+            textColor="blue"
+          />
+        </a>
       </div>
     </div>
   );

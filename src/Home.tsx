@@ -1,20 +1,16 @@
-import { Card } from "./components/card/Card";
-import { TextSection } from "./components/textSection/TextSection";
 import { TopBar } from "./components/topBar/TopBar";
-
-import { useSections } from "./shared/hooks/useSections";
-import { SectionsContext } from "./shared/contexts/sectionContext";
 
 import me from "./assets/images/me.jpeg";
 import igIcon from "./assets/icons/Instagram.svg";
 import linkedInIcon from "./assets/icons/LinkedIn.svg";
 import gmailIcon from "./assets/icons/gmail.svg";
-import "./home.css";
 import { Container } from "./components/shared/container/Container";
 import { PointerWithText } from "./components/shared/pointerWithText/PointerWithText";
 import { Typography } from "./components/shared/typography/Typography";
 import { Separator } from "./components/shared/separator/Separator";
 import { SkillsListContainer } from "./components/shared/skillsListContainer/SkillsListContainer";
+
+import "./home.css";
 
 const mainSkills = ["React", "CSS", "Typescript", "VUE", "Javascript"];
 const librariesUsed = [
@@ -35,36 +31,61 @@ const backendSkills = ["C#", ".NET Core", "Entity Framework", "Node"];
 const otherExperience = ["Flutter", "React Native", "Angular", "Node"];
 
 function App() {
-  const sections = useSections();
-
   return (
-    <SectionsContext value={sections}>
+    <>
       <TopBar name="Łukasz Kowalczyk" />
       <div
         id="Home"
-        className="mb-5 lg:py-30 lg:h-screen lg:block flex flex-col"
+        className="mb-5 lg:py-20 flex flex-col lg:items-center bg-blue-200"
       >
-        <section className="flex flex-col mx-7.5 lg:mx-0 lg:flex-row gap-10 justify-center">
-          <Card
-            igIcon={igIcon}
-            gmailIcon={gmailIcon}
-            linkedInIcon={linkedInIcon}
-            name="Łukasz Kowalczyk"
-            title="Web developer"
-            handlePrimaryAction={() => {}}
-            handleSecondaryAction={() => {}}
-            igLink="https://www.instagram.com/lkow.photo/"
-            linkedInLink="www.linkedin.pl"
-            mailAddress="lukasz.kowalczyk.dev@gmail.com"
-            imgSrc={me}
-          />
-          <Container bgColor="white">
-            <TextSection
+        <section className="bg-white lg:max-w-[50%] flex flex-col lg:flex-row mx-7.5 lg:mx-0 gap-10 lg:gap-0">
+          <div className="w-full lg:w-[50%] lg:max-w-[350px] lg:flex lg:flex-col lg:justify-center">
+            <div className="py-5 px-5 lg:px-5 flex flex-col items-center justify-center gap-5 bg-white w-full">
+              <div
+                className="bg-contain bg-no-repeat bg-center w-full min-w-[240px] lg:max-w-[270px] h-full min-h-[240px]"
+                style={{ backgroundImage: `url(${me})` }}
+              ></div>
+              <div className="font-medium tracking-wide text-[21px] lg:text-[30px] text-center">
+                Web developer
+              </div>
+            </div>
+            <div className="flex py-5 px-5 gap-5 bg-blue-100 w-full justify-center [&>a]:rounded-xs [&>a]:p-[5px] [&>a]:hover:bg-white">
+              <a href="https://www.instagram.com/lkow.photo/" target="_blank">
+                <img src={igIcon} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/łukasz-kowalczyk-80ab8610b"
+                target="_blank"
+              >
+                <img src={linkedInIcon} />
+              </a>
+              <a href="mailto:lukasz.kowalczyk.dev@gmail.com">
+                <img src={gmailIcon} />
+              </a>
+            </div>
+            <div className="bg-blue-100 pb-5"></div>
+          </div>
+          <div className="w-full flex flex-col gap-[30px] py-10 px-5  lg:w-[50%] lg:max-w-[350px]">
+            <div className="flex flex-col gap-2.5">
+              <Typography fontType="header" textColor="blue" text="Cześć" />
+              <Typography
+                fontType="subheader"
+                textColor="blue"
+                text="Oto kim jestem i co robię"
+              />
+            </div>
+            <Typography
+              fontType="body"
+              textColor="blue"
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            />
+
+            {/* <TextSection
               header="Cześć"
               subheader="Oto kim jestem i co robię"
               body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            />
-          </Container>
+            /> */}
+          </div>
         </section>
       </div>
       <Container bgColor="white">
@@ -165,7 +186,7 @@ function App() {
           ))}
         </SkillsListContainer>
       </Container>
-    </SectionsContext>
+    </>
   );
 }
 
