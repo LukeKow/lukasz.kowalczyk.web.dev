@@ -1,3 +1,5 @@
+import type { PointerColor } from "../pointer/PointerTypes";
+
 export interface MenuProps {
-  color?: string;
+  pointerColor: PointerColor;
 }

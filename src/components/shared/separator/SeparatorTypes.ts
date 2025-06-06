@@ -1,7 +1,7 @@
 import {
   pointerColorMap,
   type PointerColor as SeparatorColor,
-} from "../pointerWithText/PointerWithTextTypes";
+} from "../../topBar/components/pointer/PointerTypes";
 
 export const separatorColorMap = pointerColorMap;
 export interface SeparatorProps {

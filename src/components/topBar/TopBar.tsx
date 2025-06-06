@@ -13,7 +13,7 @@ export const TopBar = ({ name }: TopBarProps) => {
           textCustomStyle="font-semibold text-[24px]/[36px]"
         />
       </div>
-      <Menu color="blue" />
+      <Menu pointerColor="darkBlue" />
     </div>
   );
 };

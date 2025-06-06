@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Square } from "../square/Square";
 import { type MenuProps } from "./MenuTypes";
 import { MenuOverlay } from "../../../menuOverlay/MenuOverlay";
 import { createPortal } from "react-dom";
+import { Pointer } from "../pointer/Pointer";
 
-export const Menu = ({ color }: MenuProps) => {
+export const Menu = ({ pointerColor }: MenuProps) => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
 
   return (
@@ -18,9 +18,9 @@ export const Menu = ({ color }: MenuProps) => {
 				hover:[&>div]:nth-2:self-center hover:[&>div]:nth-3:self-end`}
         onClick={() => setIsMenuVisible(!isMenuVisible)}
       >
-        <Square variant="animated" color={color} />
-        <Square variant="animated" color={color} />
-        <Square variant="animated" color={color} />
+        <Pointer variant="animated" color={pointerColor} />
+        <Pointer variant="animated" color={pointerColor} />
+        <Pointer variant="animated" color={pointerColor} />
       </button>
       {isMenuVisible &&
         createPortal(

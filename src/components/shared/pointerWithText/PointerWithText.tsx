@@ -1,9 +1,6 @@
-import { Square } from "../../topBar/components/square/Square";
+import { Pointer } from "../../topBar/components/pointer/Pointer";
 import { Typography } from "../typography/Typography";
-import {
-  type PointerWithTextProps,
-  pointerColorMap,
-} from "./PointerWithTextTypes";
+import { type PointerWithTextProps } from "./PointerWithTextTypes";
 
 export const PointerWithText = ({
   fontType,
@@ -17,10 +14,10 @@ export const PointerWithText = ({
   return (
     <div className="h-10 lg:h-20 flex justify-between">
       <div className="flex gap-2.5 items-center ">
-        <Square
+        <Pointer
           variant="steady"
           size={`${pointerSize || "16px"}`}
-          color={pointerColorMap[pointerColor] || pointerCustomStyle}
+          color={pointerColor || pointerCustomStyle}
         />
         <Typography
           text={text}
