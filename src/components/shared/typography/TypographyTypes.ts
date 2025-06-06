@@ -1,14 +1,14 @@
-type TextType = "header" | "subheader" | "body" | "sideNote" | "custom";
+type FontType = "header" | "subheader" | "body" | "sideNote" | "custom";
 type TextColor = "blue" | "orange" | "pink" | "black" | "custom";
 
 export interface TypographyProps {
   text: string;
-  tType: TextType;
-  tColor: TextColor;
-  cssClass?: string;
+  fontType: FontType;
+  textColor: TextColor;
+  textCustomStyle?: string;
 }
 
-export const textTypeMap: Record<TextType, string> = {
+export const textTypeMap: Record<FontType, string> = {
   header: "font-semibold text-[32px]/[48px]",
   subheader: "font-normal text-[24px]/[36px]",
   body: "font-light text-[18px]/[27px]",

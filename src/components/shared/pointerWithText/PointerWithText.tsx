@@ -6,12 +6,13 @@ import {
 } from "./PointerWithTextTypes";
 
 export const PointerWithText = ({
-  tType,
-  tColor,
+  fontType,
+  textColor,
   text,
-  cssClass,
+  textCustomStyle,
   pointerSize,
   pointerColor,
+  pointerCustomStyle,
 }: PointerWithTextProps) => {
   return (
     <div className="h-10 lg:h-20 flex justify-between">
@@ -19,13 +20,13 @@ export const PointerWithText = ({
         <Square
           variant="steady"
           size={`${pointerSize || "16px"}`}
-          color={pointerColorMap[pointerColor]}
+          color={pointerColorMap[pointerColor] || pointerCustomStyle}
         />
         <Typography
           text={text}
-          tType={tType}
-          cssClass={cssClass}
-          tColor={tColor}
+          fontType={fontType}
+          textCustomStyle={textCustomStyle}
+          textColor={textColor}
         />
       </div>
     </div>

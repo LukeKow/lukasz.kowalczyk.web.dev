@@ -5,14 +5,14 @@ import {
 } from "./TypographyTypes";
 
 export const Typography = ({
-  tType,
-  tColor,
+  fontType,
+  textColor,
   text,
-  cssClass,
+  textCustomStyle,
 }: TypographyProps) => {
   return (
     <span
-      className={`${textTypeMap[tType]} ${textColorMap[tColor]} ${cssClass}`}
+      className={`${textCustomStyle} ${textTypeMap[fontType]} ${textColorMap[textColor]}`}
     >
       {text}
     </span>

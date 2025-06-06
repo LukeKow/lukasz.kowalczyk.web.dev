@@ -11,19 +11,19 @@ type Story = StoryObj<typeof Typography>;
 
 export const Primary: Story = {
   argTypes: {
-    tType: {
+    fontType: {
       control: "select",
       options: ["header", "subheader", "body", "sideNote"],
     },
-    tColor: {
+    textColor: {
       control: "select",
       options: ["blue", "orange", "black", "pink"],
     },
   },
   args: {
     text: "Dummy text",
-    tType: "header",
-    tColor: "black",
-    cssClass: "text-black",
+    fontType: "header",
+    textColor: "black",
+    textCustomStyle: "text-black",
   },
 };

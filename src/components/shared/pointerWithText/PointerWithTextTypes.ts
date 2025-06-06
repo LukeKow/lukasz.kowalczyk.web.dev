@@ -7,7 +7,8 @@ export type PointerColor =
   | "darkOrange"
   | "pink"
   | "darkPink"
-  | "black";
+  | "black"
+  | "custom";
 
 export const pointerColorMap: Record<PointerColor, string> = {
   blue: "bg-blue-500",
@@ -17,9 +18,11 @@ export const pointerColorMap: Record<PointerColor, string> = {
   pink: "bg-pink-500",
   darkPink: "bg-pink-700",
   black: "bg-black",
+  custom: "",
 };
 
 export interface PointerWithTextProps extends TypographyProps {
   pointerSize?: string;
   pointerColor: PointerColor;
+  pointerCustomStyle?: string;
 }

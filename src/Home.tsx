@@ -14,6 +14,7 @@ import { Container } from "./components/shared/container/Container";
 import { PointerWithText } from "./components/shared/pointerWithText/PointerWithText";
 import { Typography } from "./components/shared/typography/Typography";
 import { Separator } from "./components/shared/separator/Separator";
+import { SkillsListContainer } from "./components/shared/skillsListContainer/SkillsListContainer";
 
 const mainSkills = ["React", "CSS", "Typescript", "VUE", "Javascript"];
 const librariesUsed = [
@@ -39,7 +40,10 @@ function App() {
   return (
     <SectionsContext value={sections}>
       <TopBar name="Łukasz Kowalczyk" />
-      <div id="Home" className="lg:py-30 lg:h-screen lg:block flex flex-col">
+      <div
+        id="Home"
+        className="mb-5 lg:py-30 lg:h-screen lg:block flex flex-col"
+      >
         <section className="flex flex-col mx-7.5 lg:mx-0 lg:flex-row gap-10 justify-center">
           <Card
             igIcon={igIcon}
@@ -65,74 +69,101 @@ function App() {
       </div>
       <Container bgColor="white">
         <PointerWithText
-          tType="subheader"
-          tColor="blue"
+          fontType="subheader"
+          textColor="blue"
           text={"MAIN SKILLS"}
-          pointerColor="blue"
+          pointerColor="darkBlue"
         />
         <Typography
-          tType="subheader"
-          tColor="blue"
+          fontType="subheader"
+          textColor="blue"
           text="Front-end"
-          cssClass="mt-10"
+          textCustomStyle="mt-10"
         />
-        <div className="pl-5 mt-5">
+        <SkillsListContainer>
           {mainSkills.map((mainSkill, index) => (
             <PointerWithText
               key={index}
               text={mainSkill}
               pointerSize="10px"
-              tColor="blue"
-              tType="body"
+              textColor="blue"
+              fontType="body"
               pointerColor="darkBlue"
             />
           ))}
-        </div>
+        </SkillsListContainer>
         <Typography
-          tType="subheader"
-          tColor="blue"
+          fontType="subheader"
+          textColor="blue"
           text="Libraries used"
-          cssClass="mt-10"
+          textCustomStyle="mt-10"
         />
-        <div className="pl-5 mt-5">
+        <SkillsListContainer>
           {librariesUsed.map((library, index) => (
             <PointerWithText
               key={index}
               text={library}
               pointerSize="10px"
-              tColor="blue"
-              tType="body"
+              textColor="blue"
+              fontType="body"
               pointerColor="darkBlue"
             />
           ))}
-        </div>
+        </SkillsListContainer>
+        <Separator color="blue" separatorCustomStyle="my-10" />
       </Container>
-      <Separator color="blue" />
       <Container bgColor="white">
         <PointerWithText
-          tType="subheader"
-          tColor="blue"
+          fontType="subheader"
+          textColor="blue"
           text={"SIDE SKILLS"}
-          pointerColor="blue"
+          pointerColor="custom"
+          pointerCustomStyle="bg-blue-400"
+          textCustomStyle=""
         />
         <Typography
-          tType="subheader"
-          tColor="blue"
+          fontType="subheader"
+          textColor="blue"
           text="Back-end"
-          cssClass="mt-10"
+          textCustomStyle="mt-10"
         />
-        <div className="pl-5 mt-5">
+        <SkillsListContainer>
           {backendSkills.map((skill, index) => (
             <PointerWithText
               key={index}
               text={skill}
               pointerSize="10px"
-              tColor="blue"
-              tType="body"
-              pointerColor="darkBlue"
+              textColor="blue"
+              fontType="body"
+              pointerColor="custom"
+              pointerCustomStyle="bg-blue-400"
             />
           ))}
-        </div>
+        </SkillsListContainer>
+        <Separator color={"custom"} separatorCustomStyle="bg-blue-400 my-10" />
+      </Container>
+      <Container bgColor="white">
+        <PointerWithText
+          fontType="subheader"
+          textColor="blue"
+          text={"OTHER EXPERIENCE"}
+          pointerColor="custom"
+          pointerCustomStyle="bg-blue-200"
+          textCustomStyle=""
+        />
+        <SkillsListContainer>
+          {otherExperience.map((skill, index) => (
+            <PointerWithText
+              key={index}
+              text={skill}
+              pointerSize="10px"
+              textColor="blue"
+              fontType="body"
+              pointerColor="custom"
+              pointerCustomStyle="bg-blue-200"
+            />
+          ))}
+        </SkillsListContainer>
       </Container>
     </SectionsContext>
   );

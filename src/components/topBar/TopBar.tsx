@@ -8,9 +8,9 @@ export const TopBar = ({ name }: TopBarProps) => {
       <div className="flex gap-2.5">
         <Typography
           text={name}
-          tColor="blue"
-          tType="custom"
-          cssClass="font-semibold text-[24px]/[36px]"
+          textColor="blue"
+          fontType="custom"
+          textCustomStyle="font-semibold text-[24px]/[36px]"
         />
       </div>
       <Menu color="blue" />

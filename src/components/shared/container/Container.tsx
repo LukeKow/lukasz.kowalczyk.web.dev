@@ -6,7 +6,7 @@ export const Container = ({
   children,
 }: PropsWithChildren<ConatinerProps>) => {
   return (
-    <div className={`py-10 px-5 flex flex-col ${buttonColorMap[bgColor]}`}>
+    <div className={`py-5 px-5 flex flex-col ${buttonColorMap[bgColor]}`}>
       {children}
     </div>
   );
