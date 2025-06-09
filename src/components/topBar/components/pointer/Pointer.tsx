@@ -5,7 +5,7 @@ export const Pointer = (props: PointerProps) => {
     <>
       {props.variant === "animated" ? (
         <div
-          className={`${props.customStyle} ${pointerColorMap[props.color]} h-[5px] duration-500 transition-all ease-in-out`}
+          className={`${props.customStyle} ${pointerColorMap[props.color]} h-[5px] duration-500 transition-all ease-in-out hover:w-[25px]`}
         />
       ) : (
         <div
