@@ -10,7 +10,11 @@ export default meta;
 type Story = StoryObj<typeof SkillsListContainer>;
 
 export const Primary: Story = {
-  args: {
-    children: ["test-1", "test-2", "test-3"],
-  },
+  render: (props) => (
+    <SkillsListContainer {...props}>
+      <div>test 1</div>
+      <div>test 2</div>
+      <div>test 3</div>
+    </SkillsListContainer>
+  ),
 };

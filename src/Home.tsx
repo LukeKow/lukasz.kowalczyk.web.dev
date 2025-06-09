@@ -38,8 +38,8 @@ function App() {
         id="Home"
         className="mb-5 lg:py-20 flex flex-col lg:items-center bg-blue-200"
       >
-        <section className="bg-white lg:max-w-[50%] flex flex-col lg:flex-row mx-2.5 md:mx-5 gap-10 lg:gap-0">
-          <div className="w-full lg:w-[50%] lg:max-w-[350px] lg:flex lg:flex-col lg:justify-center">
+        <section className="md:bg-white lg:shadow-md lg:max-w-[50%] flex flex-col lg:flex-row mx-2.5 md:mx-5 gap-10 lg:gap-0">
+          <div className="w-full shadow-md md:shadow-none lg:w-[50%] lg:max-w-[350px] lg:flex lg:flex-col lg:justify-center">
             <div className="py-5 px-2.5 md:px-5 flex flex-col items-center justify-center gap-5 bg-white w-full">
               <img src={me} className="w-full max-w-[385px]" />
               <div className="font-medium tracking-wide text-[21px] lg:text-[30px] text-center">
@@ -79,7 +79,7 @@ function App() {
           </div>
         </section>
       </div>
-      <Container bgColor="white">
+      <Container bgColor="none">
         <div>
           <PointerWithText
             fontType="subheader"
@@ -171,7 +171,7 @@ function App() {
           separatorCustomStyle="hidden md:block my-10 md:w-[25%]"
         />
       </Container>
-      <Container bgColor="white">
+      <Container bgColor="none">
         <PointerWithText
           fontType="subheader"
           textColor="blue"

@@ -13,7 +13,7 @@ export const Primary: Story = {
   argTypes: {
     bgColor: {
       control: "radio",
-      options: ["orange", "blue", "pink", "white"],
+      options: ["orange", "blue", "pink", "white", "none"],
     },
   },
   args: {
