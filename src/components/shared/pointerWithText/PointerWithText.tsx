@@ -12,12 +12,13 @@ export const PointerWithText = ({
   pointerCustomStyle,
 }: PointerWithTextProps) => {
   return (
-    <div className="h-10 lg:h-20 flex justify-between">
+    <div className="h- flex justify-between">
       <div className="flex gap-2.5 items-center ">
         <Pointer
           variant="steady"
           size={`${pointerSize || "16px"}`}
-          color={pointerColor || pointerCustomStyle}
+          color={pointerColor}
+          customStyle={pointerCustomStyle}
         />
         <Typography
           text={text}

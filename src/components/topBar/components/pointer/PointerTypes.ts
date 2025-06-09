@@ -22,10 +22,12 @@ export const pointerColorMap: Record<PointerColor, string> = {
 export type PointerProps =
   | {
       color: PointerColor;
+      customStyle?: string;
       variant: "animated";
     }
   | {
-      size: string;
       color: PointerColor;
+      customStyle?: string;
+      size: string;
       variant: "steady";
     };

@@ -38,13 +38,10 @@ function App() {
         id="Home"
         className="mb-5 lg:py-20 flex flex-col lg:items-center bg-blue-200"
       >
-        <section className="bg-white lg:max-w-[50%] flex flex-col lg:flex-row mx-7.5 lg:mx-0 gap-10 lg:gap-0">
+        <section className="bg-white lg:max-w-[50%] flex flex-col lg:flex-row mx-2.5 md:mx-5 gap-10 lg:gap-0">
           <div className="w-full lg:w-[50%] lg:max-w-[350px] lg:flex lg:flex-col lg:justify-center">
-            <div className="py-5 px-5 lg:px-5 flex flex-col items-center justify-center gap-5 bg-white w-full">
-              <div
-                className="bg-contain bg-no-repeat bg-center w-full min-w-[240px] lg:max-w-[270px] h-full min-h-[240px]"
-                style={{ backgroundImage: `url(${me})` }}
-              ></div>
+            <div className="py-5 px-2.5 md:px-5 flex flex-col items-center justify-center gap-5 bg-white w-full">
+              <img src={me} className="w-full max-w-[385px]" />
               <div className="font-medium tracking-wide text-[21px] lg:text-[30px] text-center">
                 Web developer
               </div>
@@ -65,7 +62,7 @@ function App() {
             </div>
             <div className="bg-blue-100 pb-5"></div>
           </div>
-          <div className="w-full flex flex-col gap-[30px] py-10 px-5  lg:w-[50%] lg:max-w-[350px]">
+          <div className="w-full flex flex-col gap-[30px] py-10 px-2.5 md:px-5  lg:w-[50%] lg:max-w-[350px]">
             <div className="flex flex-col gap-2.5">
               <Typography fontType="header" textColor="blue" text="Cześć" />
               <Typography
@@ -79,59 +76,100 @@ function App() {
               textColor="blue"
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             />
-
-            {/* <TextSection
-              header="Cześć"
-              subheader="Oto kim jestem i co robię"
-              body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            /> */}
           </div>
         </section>
       </div>
       <Container bgColor="white">
-        <PointerWithText
-          fontType="subheader"
-          textColor="blue"
-          text={"MAIN SKILLS"}
-          pointerColor="darkBlue"
+        <div>
+          <PointerWithText
+            fontType="subheader"
+            textColor="blue"
+            text={"MAIN SKILLS"}
+            pointerColor="darkBlue"
+          />
+        </div>
+        <div className="flex md:hidden flex-col">
+          <Typography
+            fontType="subheader"
+            textColor="blue"
+            text="Front-end"
+            textCustomStyle="mt-10"
+          />
+          <SkillsListContainer>
+            {mainSkills.map((mainSkill, index) => (
+              <PointerWithText
+                key={index}
+                text={mainSkill}
+                pointerSize="10px"
+                textColor="blue"
+                fontType="body"
+                pointerColor="darkBlue"
+              />
+            ))}
+          </SkillsListContainer>
+          <Typography
+            fontType="subheader"
+            textColor="blue"
+            text="Libraries used"
+            textCustomStyle="mt-10"
+          />
+          <SkillsListContainer>
+            {librariesUsed.map((library, index) => (
+              <PointerWithText
+                key={index}
+                text={library}
+                pointerSize="10px"
+                textColor="blue"
+                fontType="body"
+                pointerColor="darkBlue"
+              />
+            ))}
+          </SkillsListContainer>
+          <Separator color="blue" separatorCustomStyle="my-10" />
+        </div>
+        <div className="hidden md:grid grid-cols-2 gap-y-5">
+          <Typography
+            fontType="subheader"
+            textColor="blue"
+            text="Front-end"
+            textCustomStyle="mt-10"
+          />
+          <Typography
+            fontType="subheader"
+            textColor="blue"
+            text="Libraries used"
+            textCustomStyle="mt-10"
+          />
+          <SkillsListContainer>
+            {mainSkills.map((mainSkill, index) => (
+              <PointerWithText
+                key={index}
+                text={mainSkill}
+                pointerSize="10px"
+                textColor="blue"
+                fontType="body"
+                pointerColor="darkBlue"
+              />
+            ))}
+          </SkillsListContainer>
+
+          <SkillsListContainer>
+            {librariesUsed.map((library, index) => (
+              <PointerWithText
+                key={index}
+                text={library}
+                pointerSize="10px"
+                textColor="blue"
+                fontType="body"
+                pointerColor="darkBlue"
+              />
+            ))}
+          </SkillsListContainer>
+        </div>
+        <Separator
+          color="darkBlue"
+          separatorCustomStyle="hidden md:block my-10 md:w-[25%]"
         />
-        <Typography
-          fontType="subheader"
-          textColor="blue"
-          text="Front-end"
-          textCustomStyle="mt-10"
-        />
-        <SkillsListContainer>
-          {mainSkills.map((mainSkill, index) => (
-            <PointerWithText
-              key={index}
-              text={mainSkill}
-              pointerSize="10px"
-              textColor="blue"
-              fontType="body"
-              pointerColor="darkBlue"
-            />
-          ))}
-        </SkillsListContainer>
-        <Typography
-          fontType="subheader"
-          textColor="blue"
-          text="Libraries used"
-          textCustomStyle="mt-10"
-        />
-        <SkillsListContainer>
-          {librariesUsed.map((library, index) => (
-            <PointerWithText
-              key={index}
-              text={library}
-              pointerSize="10px"
-              textColor="blue"
-              fontType="body"
-              pointerColor="darkBlue"
-            />
-          ))}
-        </SkillsListContainer>
-        <Separator color="blue" separatorCustomStyle="my-10" />
       </Container>
       <Container bgColor="white">
         <PointerWithText
@@ -140,51 +178,94 @@ function App() {
           text={"SIDE SKILLS"}
           pointerColor="custom"
           pointerCustomStyle="bg-blue-400"
-          textCustomStyle=""
         />
-        <Typography
-          fontType="subheader"
-          textColor="blue"
-          text="Back-end"
-          textCustomStyle="mt-10"
-        />
-        <SkillsListContainer>
-          {backendSkills.map((skill, index) => (
-            <PointerWithText
-              key={index}
-              text={skill}
-              pointerSize="10px"
-              textColor="blue"
-              fontType="body"
-              pointerColor="custom"
-              pointerCustomStyle="bg-blue-400"
-            />
-          ))}
-        </SkillsListContainer>
-        <Separator color={"custom"} separatorCustomStyle="bg-blue-400 my-10" />
-      </Container>
-      <Container bgColor="white">
-        <PointerWithText
-          fontType="subheader"
-          textColor="blue"
-          text={"OTHER EXPERIENCE"}
-          pointerColor="custom"
-          pointerCustomStyle="bg-blue-200"
-          textCustomStyle=""
-        />
-        <SkillsListContainer>
-          {otherExperience.map((skill, index) => (
-            <PointerWithText
-              key={index}
-              text={skill}
-              pointerSize="10px"
-              textColor="blue"
-              fontType="body"
-              pointerColor="custom"
-              pointerCustomStyle="bg-blue-200"
-            />
-          ))}
-        </SkillsListContainer>
+        <div className="flex md:hidden flex-col">
+          <Typography
+            fontType="subheader"
+            textColor="blue"
+            text="Back-end"
+            textCustomStyle="mt-10"
+          />
+          <SkillsListContainer>
+            {backendSkills.map((skill, index) => (
+              <PointerWithText
+                key={index}
+                text={skill}
+                pointerSize="10px"
+                textColor="blue"
+                fontType="body"
+                pointerColor="custom"
+                pointerCustomStyle="bg-blue-400"
+              />
+            ))}
+          </SkillsListContainer>
+          <Separator
+            color={"custom"}
+            separatorCustomStyle="bg-blue-400 my-10"
+          />
+          <PointerWithText
+            fontType="subheader"
+            textColor="blue"
+            text={"OTHER EXPERIENCE"}
+            pointerColor="custom"
+            pointerCustomStyle="bg-blue-200"
+            textCustomStyle=""
+          />
+          <SkillsListContainer>
+            {otherExperience.map((skill, index) => (
+              <PointerWithText
+                key={index}
+                text={skill}
+                pointerSize="10px"
+                textColor="blue"
+                fontType="body"
+                pointerColor="custom"
+                pointerCustomStyle="bg-blue-200"
+              />
+            ))}
+          </SkillsListContainer>
+        </div>
+        <div className="md:grid hidden grid-cols-2">
+          <Typography
+            fontType="subheader"
+            textColor="blue"
+            text="Back-end"
+            textCustomStyle="mt-10"
+          />
+          <Typography
+            fontType="subheader"
+            textColor="blue"
+            text="Other experience"
+            textCustomStyle="mt-10"
+          />
+          <SkillsListContainer>
+            {backendSkills.map((skill, index) => (
+              <PointerWithText
+                key={index}
+                text={skill}
+                pointerSize="10px"
+                textColor="blue"
+                fontType="body"
+                pointerColor="custom"
+                pointerCustomStyle="bg-blue-400"
+              />
+            ))}
+          </SkillsListContainer>
+
+          <SkillsListContainer>
+            {otherExperience.map((skill, index) => (
+              <PointerWithText
+                key={index}
+                text={skill}
+                pointerSize="10px"
+                textColor="blue"
+                fontType="body"
+                pointerColor="custom"
+                pointerCustomStyle="bg-blue-400"
+              />
+            ))}
+          </SkillsListContainer>
+        </div>
       </Container>
     </>
   );
