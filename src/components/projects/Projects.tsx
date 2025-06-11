@@ -1,6 +1,7 @@
 import { PointerWithText } from "../shared/pointerWithText/PointerWithText";
 import { Typography } from "../shared/typography/Typography";
 import { TopBar } from "../topBar/TopBar";
+import { Card } from "./components/card/Card";
 import { type ProjectsProps } from "./ProjectsTypes";
 
 export const Projects = ({ title }: ProjectsProps) => {
@@ -20,8 +21,14 @@ export const Projects = ({ title }: ProjectsProps) => {
           text="Niektóre projekty, w których brałem udział"
         />
       </div>
-      {/* TODO: Create ProjectCard component */}
-      <p> Here's a place for project Card</p>
+      <Card
+        projectTitle={"Dummy title"}
+        projectDesc={
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        }
+        theme={"pink"}
+        role={"Web developer"}
+      />
     </>
   );
 };

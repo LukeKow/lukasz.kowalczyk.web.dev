@@ -12,7 +12,7 @@ export const PointerWithText = ({
   pointerCustomStyle,
 }: PointerWithTextProps) => {
   return (
-    <div className="h- flex justify-between">
+    <div className="flex justify-between">
       <div className="flex gap-2.5 items-center ">
         <Pointer
           variant="steady"

@@ -1,5 +1,5 @@
 type FontType = "header" | "subheader" | "body" | "sideNote" | "custom";
-type TextColor = "blue" | "orange" | "pink" | "black" | "custom";
+export type TextColor = "blue" | "orange" | "pink" | "black" | "custom";
 
 export interface TypographyProps {
   text: string;
