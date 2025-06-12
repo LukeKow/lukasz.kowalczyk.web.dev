@@ -12,7 +12,7 @@ export const textTypeMap: Record<FontType, string> = {
   header: "font-semibold text-[32px]/[48px]",
   subheader: "font-normal text-[24px]/[36px]",
   body: "font-light text-[18px]/[27px]",
-  sideNote: "italic font-thin text-[18px]/[27px]",
+  sideNote: "italic font-light text-[18px]/[27px]",
   custom: "",
 };
 

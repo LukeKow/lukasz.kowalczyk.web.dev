@@ -12,21 +12,19 @@ export const PointerWithText = ({
   pointerCustomStyle,
 }: PointerWithTextProps) => {
   return (
-    <div className="flex justify-between">
-      <div className="flex gap-2.5 items-center ">
-        <Pointer
-          variant="steady"
-          size={`${pointerSize || "16px"}`}
-          color={pointerColor}
-          customStyle={pointerCustomStyle}
-        />
-        <Typography
-          text={text}
-          fontType={fontType}
-          textCustomStyle={textCustomStyle}
-          textColor={textColor}
-        />
-      </div>
+    <div className="flex gap-2.5 items-center ">
+      <Pointer
+        variant="steady"
+        size={`${pointerSize || "16px"}`}
+        color={pointerColor}
+        customStyle={pointerCustomStyle}
+      />
+      <Typography
+        text={text}
+        fontType={fontType}
+        textCustomStyle={textCustomStyle}
+        textColor={textColor}
+      />
     </div>
   );
 };

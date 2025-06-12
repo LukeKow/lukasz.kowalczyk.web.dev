@@ -1,18 +1,19 @@
-import type { TextColor } from "../../../shared/typography/TypographyTypes";
-import type { PointerColor } from "../../../topBar/components/pointer/PointerTypes";
+export type CardThemeColor = "blue" | "pink" | "orange" | "bnw";
 
-type CardThemeColor = "blue" | "pink" | "orange" | "bnw";
 type CardTheme = {
   background: string;
   text: string;
+  stroke?: React.HTMLAttributes<SVGElement>["className"];
+  fill?: React.HTMLAttributes<SVGElement>["className"];
   accent: string;
 };
 
 export interface CardProps {
   projectTitle: string;
-	projectDesc: string;
+  projectDesc: string;
   role: string;
-  theme: CardThemeColor;
+  color: CardThemeColor;
+  imgSrc: string;
 }
 
 export const cardThemeColorMap: Record<CardThemeColor, CardTheme> = {

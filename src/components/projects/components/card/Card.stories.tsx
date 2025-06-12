@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Card } from "./Card";
+import car from "../../../../assets/images/car.jpg";
 
 const meta: Meta<typeof Card> = {
   component: Card,
@@ -14,7 +15,8 @@ export const Primary: Story = {
     projectTitle: "Dummy title",
     projectDesc:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    theme: "pink",
+    color: "pink",
     role: "Web developer",
+    imgSrc: car,
   },
 };
