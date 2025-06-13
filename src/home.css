@@ -1,5 +1,5 @@
 @media (width < 48rem /* 768px */) {
-	#Home {
-		background: var(--bg-tb-blue-gradient);
+  #Home {
+    background: var(--bg-tb-blue-gradient);
   }
 }

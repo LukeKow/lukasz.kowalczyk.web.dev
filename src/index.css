@@ -2,25 +2,25 @@
 @import "tailwindcss";
 
 @theme {
-	--color-pink-100: #FFFAFB;
-  --color-pink-200: #FCCFD3;
-  --color-pink-300: #F9A9B0;
-  --color-pink-400: #F7838D;
-  --color-pink-500: #F45B69;
-  --color-pink-600: #EF1024;
-  --color-pink-700: #A30B19;
-  --color-pink-800: #56060D;
+  --color-pink-100: #fffafb;
+  --color-pink-200: #fccfd3;
+  --color-pink-300: #f9a9b0;
+  --color-pink-400: #f7838d;
+  --color-pink-500: #f45b69;
+  --color-pink-600: #ef1024;
+  --color-pink-700: #a30b19;
+  --color-pink-800: #56060d;
   --color-pink-900: #050001;
   --color-blue-100: #fafcff;
   --color-blue-150: #e5f1ff;
   --color-blue-200: #cce4ff;
-  --color-blue-300: #99C9FF;
+  --color-blue-300: #99c9ff;
   --color-blue-400: #66aeff;
   --color-blue-500: #3795ff;
   --color-blue-600: #006eeb;
-  --color-blue-700: #004A9E;
+  --color-blue-700: #004a9e;
   --color-blue-800: #002957;
-  --color-blue-900: #00050A;
+  --color-blue-900: #00050a;
   --color-turquoise-100: #faffff;
   --color-turquoise-150: #d1fffc;
   --color-turquoise-400: #1affef;
@@ -37,7 +37,7 @@
   --color-orange-800: #573700;
   --color-orange-900: #0a0700;
   --color-brown-200: #dad2c9;
-	--color-brown-900: #030302;
+  --color-brown-900: #030302;
   --default-font-family: "Fira Sans", sans-serif;
   --tw-duration: 5;
   --bg-lr-blue-gradient: linear-gradient(
@@ -53,7 +53,7 @@
     #fff 10%,
     var(--color-blue-200) 10%,
     var(--color-blue-200) 85%,
-		#fff 85%,
+    #fff 85%,
     #fff 100%
   );
 }

@@ -1,4 +1,3 @@
-import type { SeparatorColor } from "../../../shared/separator/SeparatorTypes";
 import type { PointerColor } from "../../../topBar/components/pointer/PointerTypes";
 import type { CardThemeColor } from "../card/CardTypes";
 
