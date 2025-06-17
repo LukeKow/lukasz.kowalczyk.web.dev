@@ -12,10 +12,10 @@ type Story = StoryObj<typeof Card>;
 
 export const Primary: Story = {
   args: {
-    projectTitle: "Dummy title",
-    projectDesc:
+    title: "Dummy title",
+    description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    color: "pink",
+    theme: "pink",
     role: "Web developer",
     imgSrc: car,
   },

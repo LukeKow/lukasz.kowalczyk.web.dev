@@ -1,14 +1,14 @@
 import { TopBar } from "./components/topBar/TopBar";
 
-import me from "./assets/images/me.jpeg";
 import igIcon from "./assets/icons/Instagram.svg";
 import linkedInIcon from "./assets/icons/LinkedIn.svg";
 import gmailIcon from "./assets/icons/gmail.svg";
+import me from "./assets/images/me.jpeg";
 import { Container } from "./components/shared/container/Container";
 import { PointerWithText } from "./components/shared/pointerWithText/PointerWithText";
-import { Typography } from "./components/shared/typography/Typography";
 import { Separator } from "./components/shared/separator/Separator";
 import { SkillsListContainer } from "./components/shared/skillsListContainer/SkillsListContainer";
+import { Typography } from "./components/shared/typography/Typography";
 
 import "./home.css";
 
@@ -84,7 +84,7 @@ function App() {
           <PointerWithText
             fontType="subheader"
             textColor="blue"
-            text={"MAIN SKILLS"}
+            text={"GŁÓWNE UMIEJĘTNOŚCI"}
             pointerColor="darkBlue"
           />
         </div>
@@ -110,7 +110,7 @@ function App() {
           <Typography
             fontType="subheader"
             textColor="blue"
-            text="Libraries used"
+            text="Używane biblioteki"
             textCustomStyle="mt-10"
           />
           <SkillsListContainer>
@@ -137,7 +137,7 @@ function App() {
           <Typography
             fontType="subheader"
             textColor="blue"
-            text="Libraries used"
+            text="Używane biblioteki"
             textCustomStyle="mt-10"
           />
           <SkillsListContainer>
@@ -175,7 +175,7 @@ function App() {
         <PointerWithText
           fontType="subheader"
           textColor="blue"
-          text={"SIDE SKILLS"}
+          text={"POBOCZNE UMIEJĘTNOŚCI"}
           pointerColor="custom"
           pointerCustomStyle="bg-blue-400"
         />
@@ -235,7 +235,7 @@ function App() {
           <Typography
             fontType="subheader"
             textColor="blue"
-            text="Other experience"
+            text="Pozostałe doświadczenie"
             textCustomStyle="mt-10"
           />
           <SkillsListContainer>

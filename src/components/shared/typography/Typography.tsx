@@ -12,7 +12,7 @@ export const Typography = ({
 }: TypographyProps) => {
   return (
     <span
-      className={`${textCustomStyle} ${textTypeMap[fontType]} ${textColorMap[textColor]}`}
+      className={`${textTypeMap[fontType]} ${textColorMap[textColor]} ${textCustomStyle}`}
     >
       {text}
     </span>

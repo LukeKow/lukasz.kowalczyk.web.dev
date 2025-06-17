@@ -7,26 +7,22 @@ import { Typography } from "../../../shared/typography/Typography";
 import { Separator } from "../../../shared/separator/Separator";
 import type { PointerColor } from "../../../topBar/components/pointer/PointerTypes";
 import { TopBar } from "../../../topBar/TopBar";
+import { useLocation } from "react-router";
 
-export const ProjectDetails = ({
-  projectTheme,
-  title,
-  role,
-  description,
-  theJob,
-  tools,
-  imgSrc,
-}: ProjectDetailsProps) => {
-  const cardTheme = projectThemeColorMap[projectTheme];
+export const ProjectDetails = () => {
+  const { title, description, role, theme, imgSrc, tools, whatIWasDoing } =
+    useLocation().state.projectDetails as ProjectDetailsProps;
+
+  const cardTheme = projectThemeColorMap[theme];
   return (
     <>
       <TopBar name="Łukasz Kowalczyk" color={cardTheme.separator} />
-      <div className="w-full flex justify-center">
+      <div className="w-full flex justify-center pb-20">
         <div
           className={`${cardTheme.background} w-full md:max-w-[706px] shadow-md`}
         >
           <div className="flex flex-col gap-5 pt-5 pb-10">
-            <div className="flex flex-col gap-0 px-5">
+            <div className="flex flex-col gap-0 pl-2.5 md:px-5">
               <PointerWithText
                 pointerSize="10px"
                 pointerColor="custom"
@@ -34,7 +30,7 @@ export const ProjectDetails = ({
                 text={title}
                 fontType="subheader"
                 textColor="custom"
-                textCustomStyle={cardTheme.text}
+                textCustomStyle={`${cardTheme.text} text-[20px]/[30px] w-fit md:text-[24px]/[36px]`}
               />
               <Typography
                 text={role}
@@ -46,9 +42,9 @@ export const ProjectDetails = ({
             <div className="mt-5 mb-10">
               <img src={imgSrc} />
             </div>
-            <div className="flex flex-col gap-5 pt-5 px-5 pb-10">
+            <div className="flex flex-col gap-5 pt-5 px-5 pb-5">
               <Typography
-                text="Project description"
+                text="Opis projektu"
                 fontType="subheader"
                 textColor="custom"
                 textCustomStyle={`${cardTheme.text}`}
@@ -64,13 +60,13 @@ export const ProjectDetails = ({
                 separatorCustomStyle="my-5"
               />
               <Typography
-                text="What I was doing"
+                text="Czym się zajmowałem"
                 fontType="subheader"
                 textColor="custom"
                 textCustomStyle={`${cardTheme.text}`}
               />
               <Typography
-                text={theJob}
+                text={whatIWasDoing}
                 fontType="body"
                 textColor="custom"
                 textCustomStyle={`${cardTheme.text}`}
@@ -80,7 +76,7 @@ export const ProjectDetails = ({
                 separatorCustomStyle="my-5"
               />
               <Typography
-                text="Tools I've used"
+                text="Narzędzia, których używałem"
                 fontType="subheader"
                 textColor="custom"
                 textCustomStyle={`${cardTheme.text}`}

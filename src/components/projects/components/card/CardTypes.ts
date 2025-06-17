@@ -9,10 +9,10 @@ type CardTheme = {
 };
 
 export interface CardProps {
-  projectTitle: string;
-  projectDesc: string;
+  title: string;
+  description: string;
   role: string;
-  color: CardThemeColor;
+  theme: CardThemeColor;
   imgSrc: string;
 }
 

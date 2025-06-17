@@ -2,11 +2,11 @@ import type { PointerColor } from "../../../topBar/components/pointer/PointerTyp
 import type { CardThemeColor } from "../card/CardTypes";
 
 export interface ProjectDetailsProps {
-  projectTheme: CardThemeColor;
+  theme: CardThemeColor;
   title: string;
   role: string;
   description: string;
-  theJob: string;
+  whatIWasDoing: string;
   tools: string[];
   imgSrc: string;
 }

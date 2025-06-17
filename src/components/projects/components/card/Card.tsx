@@ -1,15 +1,11 @@
 import { PointerWithText } from "../../../shared/pointerWithText/PointerWithText";
 import { Typography } from "../../../shared/typography/Typography";
-import { cardThemeColorMap, type CardProps } from "./CardTypes";
+import { cardThemeColorMap } from "./CardTypes";
 import { DetailsIcon } from "../../../shared/icons";
-
-export const Card = ({
-  projectTitle,
-  projectDesc,
-  role,
-  color,
-  imgSrc,
-}: CardProps) => {
+import { Link } from "react-router";
+import { type ProjectDetailsProps as ProjectDetailsData } from "../Project/ProjectDetailsTypes";
+export const Card = (props: ProjectDetailsData) => {
+  const { title, description, role, theme: color, imgSrc } = props;
   const cardTheme = cardThemeColorMap[color];
   return (
     <div
@@ -21,10 +17,10 @@ export const Card = ({
             pointerSize="10px"
             pointerColor="custom"
             pointerCustomStyle={cardTheme.accent}
-            text={projectTitle}
+            text={title}
             fontType="subheader"
             textColor="custom"
-            textCustomStyle={cardTheme.text}
+            textCustomStyle={`${cardTheme.text} text-[20px]/[30px] w-fit md:text-[24px]/[36px]`}
           />
           <Typography
             text={role}
@@ -34,22 +30,27 @@ export const Card = ({
           />
         </div>
         <Typography
-          text={projectDesc}
+          text={description}
           fontType="body"
           textColor="custom"
           textCustomStyle={`${cardTheme.text}`}
         />
-        <button
-          className="flex justify-end w-full gap-2.5 
-				hover:cursor-pointer
-				hover:[&>svg]:[&>rect]:nth-2:w-[1px] 
-				hover:[&>svg]:[&>rect]:nth-2:h-[1px]
-				hover:[&>svg]:[&>rect]:nth-2:translate-[0px]
-				"
+        <Link
+          to={`/projects/${title.toLocaleLowerCase().split(" ").join("-")}`}
+          state={{ projectDetails: props }}
         >
-          <span className="">Details</span>
-          <DetailsIcon size="25" color={color} />
-        </button>
+          <button
+            className="flex justify-end w-full gap-2.5 
+					hover:cursor-pointer
+					hover:[&>svg]:[&>rect]:nth-2:w-[1px] 
+					hover:[&>svg]:[&>rect]:nth-2:h-[1px]
+					hover:[&>svg]:[&>rect]:nth-2:translate-[0px]
+					"
+          >
+            <span className="">Details</span>
+            <DetailsIcon size="25" color={color} />
+          </button>
+        </Link>
       </div>
       <div className="mt-5">
         <img src={imgSrc} />

@@ -27,13 +27,13 @@ export const MenuOverlay = ({ onClose }: MenuOverlayProps) => {
           className="px-2.5 py-2.5 flex items-center gap-2.5 text-brown-200 hover:cursor-pointer"
           onClick={onClose}
         >
-          close <img src={closeIcon} className="h-[12px]" />
+          zamknij <img src={closeIcon} className="h-[12px]" />
         </button>
       </div>
       <div className="h-full mb-30 flex flex-col gap-10 justify-center">
         <NavLink to="/projects">
           <PointerWithText
-            text="Projects"
+            text="Projekty"
             pointerColor="blue"
             fontType="subheader"
             textColor="blue"
