@@ -74,7 +74,7 @@ function App() {
             <Typography
               fontType="body"
               textColor="blue"
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+              text="Z wykształcenia jestem programistą z 7 letnim doświadczeniem. Z zainteresowań jestem amatorem fotografii, designu, psychologii i coachingu. Lubię szukać rozwiązań prolemów i ulepszać obecne (rozwiązania, nie problemy ;) )."
             />
           </div>
         </section>
