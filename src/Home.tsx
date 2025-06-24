@@ -36,14 +36,24 @@ function App() {
       <TopBar name="Łukasz Kowalczyk" />
       <div
         id="Home"
-        className="mb-5 lg:py-20 flex flex-col lg:items-center bg-blue-200"
+        className="mb-5 lg:py-20 flex flex-col lg:items-center bg-blue-700"
       >
         <section className="md:bg-white lg:shadow-md lg:max-w-[50%] flex flex-col lg:flex-row mx-2.5 md:mx-5 gap-10 lg:gap-0">
           <div className="w-full shadow-md md:shadow-none lg:w-[50%] lg:max-w-[350px] lg:flex lg:flex-col lg:justify-center">
             <div className="py-5 px-2.5 md:px-5 flex flex-col items-center justify-center gap-5 bg-white w-full">
               <img src={me} className="w-full max-w-[385px]" />
-              <div className="font-medium tracking-wide text-[21px] lg:text-[30px] text-center">
-                Web developer
+              <div className="flex flex-col justify-center">
+                <Typography
+                  text="Łukasz Kowalczyk"
+                  fontType="subheader"
+                  textColor="blue"
+                />
+                <Typography
+                  text="Web Developer"
+                  fontType="body"
+                  textColor="blue"
+                  textCustomStyle="text-center"
+                />
               </div>
             </div>
             <div className="flex py-5 px-5 gap-5 bg-blue-100 w-full justify-center [&>a]:rounded-xs [&>a]:p-[5px] [&>a]:hover:bg-white">
@@ -86,6 +96,7 @@ function App() {
             textColor="blue"
             text={"GŁÓWNE UMIEJĘTNOŚCI"}
             pointerColor="darkBlue"
+            pointerSize="9px"
           />
         </div>
         <div className="flex md:hidden flex-col">
@@ -100,7 +111,7 @@ function App() {
               <PointerWithText
                 key={index}
                 text={mainSkill}
-                pointerSize="10px"
+                pointerSize="5px"
                 textColor="blue"
                 fontType="body"
                 pointerColor="darkBlue"
@@ -118,7 +129,7 @@ function App() {
               <PointerWithText
                 key={index}
                 text={library}
-                pointerSize="10px"
+                pointerSize="5px"
                 textColor="blue"
                 fontType="body"
                 pointerColor="darkBlue"
@@ -145,7 +156,7 @@ function App() {
               <PointerWithText
                 key={index}
                 text={mainSkill}
-                pointerSize="10px"
+                pointerSize="5px"
                 textColor="blue"
                 fontType="body"
                 pointerColor="darkBlue"
@@ -158,7 +169,7 @@ function App() {
               <PointerWithText
                 key={index}
                 text={library}
-                pointerSize="10px"
+                pointerSize="5px"
                 textColor="blue"
                 fontType="body"
                 pointerColor="darkBlue"
@@ -178,6 +189,7 @@ function App() {
           text={"POBOCZNE UMIEJĘTNOŚCI"}
           pointerColor="custom"
           pointerCustomStyle="bg-blue-400"
+          pointerSize="9px"
         />
         <div className="flex md:hidden flex-col">
           <Typography
@@ -191,7 +203,7 @@ function App() {
               <PointerWithText
                 key={index}
                 text={skill}
-                pointerSize="10px"
+                pointerSize="5px"
                 textColor="blue"
                 fontType="body"
                 pointerColor="custom"
@@ -216,7 +228,7 @@ function App() {
               <PointerWithText
                 key={index}
                 text={skill}
-                pointerSize="10px"
+                pointerSize="5px"
                 textColor="blue"
                 fontType="body"
                 pointerColor="custom"
@@ -243,7 +255,7 @@ function App() {
               <PointerWithText
                 key={index}
                 text={skill}
-                pointerSize="10px"
+                pointerSize="5px"
                 textColor="blue"
                 fontType="body"
                 pointerColor="custom"
@@ -257,7 +269,7 @@ function App() {
               <PointerWithText
                 key={index}
                 text={skill}
-                pointerSize="10px"
+                pointerSize="5px"
                 textColor="blue"
                 fontType="body"
                 pointerColor="custom"
