@@ -33,7 +33,7 @@ const otherExperience = ["Flutter", "React Native", "Angular", "Node"];
 function App() {
   return (
     <>
-      <TopBar />
+      <TopBar color="blue" />
       <div
         id="Home"
         className="mb-5 lg:py-20 flex flex-col lg:items-center bg-blue-700"
@@ -47,7 +47,7 @@ function App() {
                 <Typography
                   text="Web Developer"
                   fontType="body"
-                  textCustomStyle="text-center text-blue-100"
+                  textCustomStyle="text-center"
                 />
               </div>
             </div>
@@ -65,7 +65,6 @@ function App() {
                 <img src={gmailIcon} />
               </a>
             </div>
-            <div className="bg-blue-100 pb-5"></div>
           </div>
           <div className="w-full flex flex-col gap-[30px] py-10 px-2.5 md:px-5  lg:w-[50%] lg:max-w-[350px]">
             <div className="flex flex-col gap-2.5">
@@ -87,7 +86,7 @@ function App() {
           <PointerWithText
             fontType="subheader"
             text={"GŁÓWNE UMIEJĘTNOŚCI"}
-            pointerColor="darkBlue"
+            pointerColor="blue"
             pointerSize="9px"
           />
         </div>
@@ -100,7 +99,7 @@ function App() {
                 text={mainSkill}
                 pointerSize="5px"
                 fontType="body"
-                pointerColor="darkBlue"
+                pointerColor="blue"
               />
             ))}
           </SkillsListContainer>
@@ -112,7 +111,7 @@ function App() {
                 text={library}
                 pointerSize="5px"
                 fontType="body"
-                pointerColor="darkBlue"
+                pointerColor="blue"
               />
             ))}
           </SkillsListContainer>
@@ -136,7 +135,7 @@ function App() {
                 text={mainSkill}
                 pointerSize="5px"
                 fontType="body"
-                pointerColor="darkBlue"
+                pointerColor="blue"
               />
             ))}
           </SkillsListContainer>
@@ -148,13 +147,13 @@ function App() {
                 text={library}
                 pointerSize="5px"
                 fontType="body"
-                pointerColor="darkBlue"
+                pointerColor="blue"
               />
             ))}
           </SkillsListContainer>
         </div>
         <Separator
-          color="darkBlue"
+          color="blue"
           separatorCustomStyle="hidden md:block my-10 md:w-[25%]"
         />
       </Container>

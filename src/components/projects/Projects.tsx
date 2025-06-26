@@ -25,7 +25,7 @@ const projects: ProjectDetailsProps[] = [
     title: "Projekt wspierający obieg dokumentów",
     description:
       "Projekt prowadzony dla jednoski rządowej w UK, umożliwiający przegląd, recenzowanie, akceptowanie bądź odrzucenie dokumentu, tworzenie, usuwanie i przechowywanie/archiwizację.",
-    theme: "bnw",
+    theme: "white",
     role: "Full stack developer with React, .NET & SharePoint",
     imgSrc: documentsFlow,
     tools: ["Entity Framework", "jest", "axios"],
@@ -59,8 +59,8 @@ const projects: ProjectDetailsProps[] = [
 export const Projects = () => {
   return (
     <>
-      <TopBar />
-      <div className="flex flex-col gap-10 items-center pb-20 mt-20">
+      <TopBar color="blue" />
+      <div className="flex flex-col gap-10 items-center pb-20 mt-5 md:mt-20">
         <div className="px-5 flex flex-col gap-2.5 w-full max-w-[706px] mx-auto">
           <PointerWithText
             pointerColor="blue"

@@ -1,4 +1,4 @@
-export type CardThemeColor = "blue" | "pink" | "orange" | "bnw";
+import type { MainTheme } from "../../../shared/SharedTypes";
 
 type CardTheme = {
   background: string;
@@ -12,11 +12,11 @@ export interface CardProps {
   title: string;
   description: string;
   role: string;
-  theme: CardThemeColor;
+  theme: MainTheme;
   imgSrc: string;
 }
 
-export const cardThemeColorMap: Record<CardThemeColor, CardTheme> = {
+export const cardThemeColorMap: Record<MainTheme, CardTheme> = {
   blue: {
     background: "bg-blue-100",
     text: "text-blue-900",
@@ -32,9 +32,14 @@ export const cardThemeColorMap: Record<CardThemeColor, CardTheme> = {
     text: "text-pink-900",
     accent: "bg-pink-700",
   },
-  bnw: {
+  white: {
     background: "bg-white",
     text: "text-black",
     accent: "bg-black",
+  },
+  black: {
+    background: "bg-black",
+    text: "text-white",
+    accent: "bg-white",
   },
 };

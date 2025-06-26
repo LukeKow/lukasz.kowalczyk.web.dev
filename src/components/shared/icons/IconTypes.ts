@@ -1,8 +1,9 @@
-import type { CardThemeColor } from "../../projects/components/card/CardTypes";
+import type { MainTheme } from "../SharedTypes";
 
 export interface IconProps {
-  size: string;
-  color: CardThemeColor;
+  width?: string;
+  height?: string;
+  color: MainTheme;
 }
 
 export type IconTheme = {
@@ -10,7 +11,7 @@ export type IconTheme = {
   stroke: React.HTMLAttributes<SVGElement>["className"];
 };
 
-export const iconThemeColorMap: Record<CardThemeColor, IconTheme> = {
+export const iconThemeColorMap: Record<MainTheme, IconTheme> = {
   blue: {
     fill: "fill-blue-700",
     stroke: "stroke-blue-700",
@@ -23,8 +24,12 @@ export const iconThemeColorMap: Record<CardThemeColor, IconTheme> = {
     fill: "fill-pink-700",
     stroke: "stroke-pink-700",
   },
-  bnw: {
-    fill: "fill-black",
-    stroke: "stroke-black",
+  black: {
+    fill: "fill-on-black",
+    stroke: "stroke-on-black",
+  },
+  white: {
+    fill: "fill-on-white",
+    stroke: "stroke-on-white",
   },
 };

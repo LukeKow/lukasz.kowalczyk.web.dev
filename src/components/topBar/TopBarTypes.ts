@@ -1,10 +1,10 @@
+import type { MainTheme } from "../shared/SharedTypes";
+
 export interface TopBarProps {
-  color?: TopBarTheme;
+  color: MainTheme;
 }
 
-export type TopBarTheme = "black" | "white" | "blue" | "pink" | "orange";
-
-export const topBatThemeMap: Record<TopBarTheme, string> = {
+export const topBatThemeMap: Record<MainTheme, string> = {
   black: "bg-black text-white",
   white: "bg-white text-black",
   blue: "bg-blue-700 text-blue-100",

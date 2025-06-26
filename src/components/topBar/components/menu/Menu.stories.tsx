@@ -11,6 +11,6 @@ type Story = StoryObj<typeof Menu>;
 
 export const Primary: Story = {
   args: {
-    pointerColor: "blue",
+    menuTheme: "blue",
   },
 };

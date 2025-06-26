@@ -1,5 +1,5 @@
-import type { PointerColor } from "../pointer/PointerTypes";
+import type { MainTheme } from "../../../shared/SharedTypes";
 
 export interface MenuProps {
-  pointerColor: PointerColor;
+  menuTheme: MainTheme;
 }

@@ -57,3 +57,28 @@
     #fff 100%
   );
 }
+
+.bottom-bar-gradient {
+  background: linear-gradient(
+    90deg,
+    #fff 0%,
+    #fff 66.6667%,
+    transparent 66.6667%,
+    transparent 100%
+  );
+}
+
+.fill-on-white {
+  fill: #000;
+}
+.fill-on-black {
+  fill: #fff;
+}
+
+.stroke-on-white {
+  stroke: #000;
+}
+
+.stroke-on-black {
+  stroke: #fff;
+}

@@ -17,7 +17,7 @@ export const ProjectDetails = () => {
   return (
     <>
       <TopBar color={cardTheme.topBarTheme} />
-      <div className="w-full flex justify-center pb-20 mt-20">
+      <div className="w-full flex justify-center pb-20">
         <div
           className={`${cardTheme.background} w-full md:max-w-[706px] shadow-md`}
         >
@@ -52,7 +52,7 @@ export const ProjectDetails = () => {
                 textCustomStyle={`${cardTheme.text}`}
               />
               <Separator
-                color={cardTheme.separator as PointerColor}
+                color={cardTheme.accent as PointerColor}
                 separatorCustomStyle="my-5"
               />
               <Typography

@@ -14,17 +14,17 @@ export const Primary: Story = {
     color: {
       control: "select",
       options: [
+        "lightBblue",
         "blue",
-        "darkBlue",
+        "lightOrange",
         "orange",
-        "darkOrange",
         "black",
+        "lightPink",
         "pink",
-        "darkPink",
       ],
     },
   },
   args: {
-    color: "darkBlue",
+    color: "blue",
   },
 };

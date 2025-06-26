@@ -1,13 +1,12 @@
 import { iconThemeColorMap, type IconProps } from "./IconTypes";
 
-export const DetailsIcon = ({ size, color }: IconProps) => {
+export const DetailsIcon = ({ width, height, color }: IconProps) => {
   const { fill, stroke } = iconThemeColorMap[color];
 
   return (
     <svg
-      className=""
-      width={size}
-      height={size}
+      width={width}
+      height={height}
       viewBox="0 0 25 25"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

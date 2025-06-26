@@ -2,25 +2,18 @@ import { useState } from "react";
 import { type MenuProps } from "./MenuTypes";
 import { MenuOverlay } from "../../../menuOverlay/MenuOverlay";
 import { createPortal } from "react-dom";
-import { Pointer } from "../pointer/Pointer";
+import { MenuIcon } from "../../../shared/icons/MenuIcon";
 
-export const Menu = ({ pointerColor }: MenuProps) => {
+export const Menu = ({ menuTheme = "pink" }: MenuProps) => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
 
   return (
     <>
       <button
-        className={`
-				py-2.5 px-5 w-[45px] h-fit flex items-center flex-col gap-[5px] 
-				[&>div]:w-[5px] duration-200 transition-all ease-in-out
-				hover:w-[65px] hover:cursor-pointer hover:bg-orange-100
-				hover:[&>div]:w-full hover:[&>div]:nth-1:self-start 
-				hover:[&>div]:nth-2:self-center hover:[&>div]:nth-3:self-end`}
+        className="py-2.5 px-5 flex "
         onClick={() => setIsMenuVisible(!isMenuVisible)}
       >
-        <Pointer variant="animated" color={pointerColor} />
-        <Pointer variant="animated" color={pointerColor} />
-        <Pointer variant="animated" color={pointerColor} />
+        <MenuIcon color={menuTheme} width="26" height="25" />
       </button>
       {isMenuVisible &&
         createPortal(

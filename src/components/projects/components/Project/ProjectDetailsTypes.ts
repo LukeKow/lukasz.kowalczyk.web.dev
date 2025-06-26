@@ -1,9 +1,7 @@
-import type { PointerColor } from "../../../topBar/components/pointer/PointerTypes";
-import { type TopBarTheme } from "../../../topBar/TopBarTypes";
-import type { CardThemeColor } from "../card/CardTypes";
+import type { MainTheme } from "../../../shared/SharedTypes";
 
 export interface ProjectDetailsProps {
-  theme: CardThemeColor;
+  theme: MainTheme;
   title: string;
   role: string;
   description: string;
@@ -15,34 +13,41 @@ export interface ProjectDetailsProps {
 type ProjectTheme = {
   background: string;
   text: string;
-  separator: Exclude<PointerColor, "blue" | "orange" | "pink" | "custom">;
+  separator: MainTheme;
   accent: string;
-  topBarTheme: TopBarTheme;
+  topBarTheme: MainTheme;
 };
 
-export const projectThemeColorMap: Record<CardThemeColor, ProjectTheme> = {
+export const projectThemeColorMap: Record<MainTheme, ProjectTheme> = {
   blue: {
     background: "bg-blue-100",
     text: "text-blue-900",
     accent: "bg-blue-700",
-    separator: "darkBlue",
+    separator: "blue",
     topBarTheme: "blue",
   },
   orange: {
     background: "bg-orange-100",
     text: "text-orange-900",
     accent: "bg-orange-700",
-    separator: "darkOrange",
+    separator: "orange",
     topBarTheme: "orange",
   },
   pink: {
     background: "bg-pink-100",
     text: "text-pink-900",
     accent: "bg-pink-700",
-    separator: "darkPink",
+    separator: "pink",
     topBarTheme: "pink",
   },
-  bnw: {
+  black: {
+    background: "bg-black",
+    text: "text-white",
+    accent: "bg-white",
+    separator: "white",
+    topBarTheme: "white",
+  },
+  white: {
     background: "bg-white",
     text: "text-black",
     accent: "bg-black",
