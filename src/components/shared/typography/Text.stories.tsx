@@ -15,15 +15,10 @@ export const Primary: Story = {
       control: "select",
       options: ["header", "subheader", "body", "sideNote"],
     },
-    textColor: {
-      control: "select",
-      options: ["blue", "orange", "black", "pink"],
-    },
   },
   args: {
     text: "Dummy text",
     fontType: "header",
-    textColor: "black",
     textCustomStyle: "text-black",
   },
 };

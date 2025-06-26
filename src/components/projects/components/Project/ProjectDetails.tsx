@@ -16,8 +16,8 @@ export const ProjectDetails = () => {
   const cardTheme = projectThemeColorMap[theme];
   return (
     <>
-      <TopBar name="Łukasz Kowalczyk" color={cardTheme.separator} />
-      <div className="w-full flex justify-center pb-20">
+      <TopBar color={cardTheme.topBarTheme} />
+      <div className="w-full flex justify-center pb-20 mt-20">
         <div
           className={`${cardTheme.background} w-full md:max-w-[706px] shadow-md`}
         >
@@ -29,13 +29,11 @@ export const ProjectDetails = () => {
                 pointerCustomStyle={cardTheme.accent}
                 text={title}
                 fontType="subheader"
-                textColor="custom"
                 textCustomStyle={`${cardTheme.text} text-[20px]/[30px] w-fit md:text-[24px]/[36px]`}
               />
               <Typography
                 text={role}
                 fontType="sideNote"
-                textColor="custom"
                 textCustomStyle={`${cardTheme.text}`}
               />
             </div>
@@ -46,13 +44,11 @@ export const ProjectDetails = () => {
               <Typography
                 text="Opis projektu"
                 fontType="subheader"
-                textColor="custom"
                 textCustomStyle={`${cardTheme.text}`}
               />
               <Typography
                 text={description}
                 fontType="body"
-                textColor="custom"
                 textCustomStyle={`${cardTheme.text}`}
               />
               <Separator
@@ -62,13 +58,11 @@ export const ProjectDetails = () => {
               <Typography
                 text="Czym się zajmowałem"
                 fontType="subheader"
-                textColor="custom"
                 textCustomStyle={`${cardTheme.text}`}
               />
               <Typography
                 text={whatIWasDoing}
                 fontType="body"
-                textColor="custom"
                 textCustomStyle={`${cardTheme.text}`}
               />
               <Separator
@@ -78,7 +72,6 @@ export const ProjectDetails = () => {
               <Typography
                 text="Narzędzia, których używałem"
                 fontType="subheader"
-                textColor="custom"
                 textCustomStyle={`${cardTheme.text}`}
               />
               <div className="pl-5 flex flex-col gap-5">
@@ -90,7 +83,6 @@ export const ProjectDetails = () => {
                     pointerCustomStyle={cardTheme.accent}
                     text={tool}
                     fontType="body"
-                    textColor="custom"
                     textCustomStyle={cardTheme.text}
                   />
                 ))}

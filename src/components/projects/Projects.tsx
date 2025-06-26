@@ -59,17 +59,15 @@ const projects: ProjectDetailsProps[] = [
 export const Projects = () => {
   return (
     <>
-      <TopBar name="Łukasz Kowalczyk" />
-      <div className="flex flex-col gap-10 items-center pb-20">
+      <TopBar />
+      <div className="flex flex-col gap-10 items-center pb-20 mt-20">
         <div className="px-5 flex flex-col gap-2.5 w-full max-w-[706px] mx-auto">
           <PointerWithText
             pointerColor="blue"
             text="PROJEKTY"
             fontType="subheader"
-            textColor="blue"
           />
           <Typography
-            textColor="blue"
             fontType="body"
             text="Niektóre projekty, w których brałem udział:"
           />

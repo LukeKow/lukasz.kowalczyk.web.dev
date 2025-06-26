@@ -1,4 +1,5 @@
 import type { PointerColor } from "../../../topBar/components/pointer/PointerTypes";
+import { type TopBarTheme } from "../../../topBar/TopBarTypes";
 import type { CardThemeColor } from "../card/CardTypes";
 
 export interface ProjectDetailsProps {
@@ -16,6 +17,7 @@ type ProjectTheme = {
   text: string;
   separator: Exclude<PointerColor, "blue" | "orange" | "pink" | "custom">;
   accent: string;
+  topBarTheme: TopBarTheme;
 };
 
 export const projectThemeColorMap: Record<CardThemeColor, ProjectTheme> = {
@@ -24,23 +26,27 @@ export const projectThemeColorMap: Record<CardThemeColor, ProjectTheme> = {
     text: "text-blue-900",
     accent: "bg-blue-700",
     separator: "darkBlue",
+    topBarTheme: "blue",
   },
   orange: {
     background: "bg-orange-100",
     text: "text-orange-900",
     accent: "bg-orange-700",
     separator: "darkOrange",
+    topBarTheme: "orange",
   },
   pink: {
     background: "bg-pink-100",
     text: "text-pink-900",
     accent: "bg-pink-700",
     separator: "darkPink",
+    topBarTheme: "pink",
   },
   bnw: {
     background: "bg-white",
     text: "text-black",
     accent: "bg-black",
     separator: "black",
+    topBarTheme: "black",
   },
 };

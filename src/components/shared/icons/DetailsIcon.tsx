@@ -16,9 +16,9 @@ export const DetailsIcon = ({ size, color }: IconProps) => {
       <rect
         x="50%"
         y="50%"
-        width="10"
-        height="10"
-        className={`${fill} translate-[-5px] duration-500 transition-all ease-in-out`}
+        width="9"
+        height="9"
+        className={`${fill} translate-[-4.5px] duration-500 transition-all ease-in-out`}
         id="fill-rect"
       />
     </svg>

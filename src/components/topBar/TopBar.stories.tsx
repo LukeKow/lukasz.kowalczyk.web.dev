@@ -10,7 +10,5 @@ export default meta;
 type Story = StoryObj<typeof TopBar>;
 
 export const Primary: Story = {
-  args: {
-    name: "Łukasz Kowalczyk",
-  },
+  args: {},
 };

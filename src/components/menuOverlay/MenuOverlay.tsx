@@ -33,10 +33,9 @@ export const MenuOverlay = ({ onClose }: MenuOverlayProps) => {
       <div className="h-full mb-30 flex flex-col gap-10 justify-center">
         <NavLink to="/projects">
           <PointerWithText
-            text="Projekty"
+            text="Projects"
             pointerColor="blue"
             fontType="subheader"
-            textColor="blue"
           />
         </NavLink>
         <a

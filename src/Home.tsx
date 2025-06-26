@@ -33,7 +33,7 @@ const otherExperience = ["Flutter", "React Native", "Angular", "Node"];
 function App() {
   return (
     <>
-      <TopBar name="Łukasz Kowalczyk" />
+      <TopBar />
       <div
         id="Home"
         className="mb-5 lg:py-20 flex flex-col lg:items-center bg-blue-700"
@@ -43,16 +43,11 @@ function App() {
             <div className="py-5 px-2.5 md:px-5 flex flex-col items-center justify-center gap-5 bg-white w-full">
               <img src={me} className="w-full max-w-[385px]" />
               <div className="flex flex-col justify-center">
-                <Typography
-                  text="Łukasz Kowalczyk"
-                  fontType="subheader"
-                  textColor="blue"
-                />
+                <Typography text="Łukasz Kowalczyk" fontType="subheader" />
                 <Typography
                   text="Web Developer"
                   fontType="body"
-                  textColor="blue"
-                  textCustomStyle="text-center"
+                  textCustomStyle="text-center text-blue-100"
                 />
               </div>
             </div>
@@ -74,17 +69,15 @@ function App() {
           </div>
           <div className="w-full flex flex-col gap-[30px] py-10 px-2.5 md:px-5  lg:w-[50%] lg:max-w-[350px]">
             <div className="flex flex-col gap-2.5">
-              <Typography fontType="header" textColor="blue" text="Cześć" />
+              <Typography fontType="header" text="Cześć" />
               <Typography
                 fontType="subheader"
-                textColor="blue"
                 text="Oto kim jestem i co robię"
               />
             </div>
             <Typography
               fontType="body"
-              textColor="blue"
-              text="Z wykształcenia jestem programistą z 7 letnim doświadczeniem. Z zainteresowań jestem amatorem fotografii, designu, psychologii i coachingu. Lubię szukać rozwiązań prolemów i ulepszać obecne (rozwiązania, nie problemy ;) )."
+              text="Z wykształcenia jestem programistą z 7 letnim doświadczeniem. Z zainteresowań amatorem fotografii, designu, psychologii i coachingu. Lubię szukać rozwiązań prolemów i ulepszać obecne (rozwiązania, nie problemy ;) )."
             />
           </div>
         </section>
@@ -93,44 +86,31 @@ function App() {
         <div>
           <PointerWithText
             fontType="subheader"
-            textColor="blue"
             text={"GŁÓWNE UMIEJĘTNOŚCI"}
             pointerColor="darkBlue"
             pointerSize="9px"
           />
         </div>
         <div className="flex md:hidden flex-col">
-          <Typography
-            fontType="subheader"
-            textColor="blue"
-            text="Front-end"
-            textCustomStyle="mt-10"
-          />
+          <Typography fontType="subheader" text="Front-end" />
           <SkillsListContainer>
             {mainSkills.map((mainSkill, index) => (
               <PointerWithText
                 key={index}
                 text={mainSkill}
                 pointerSize="5px"
-                textColor="blue"
                 fontType="body"
                 pointerColor="darkBlue"
               />
             ))}
           </SkillsListContainer>
-          <Typography
-            fontType="subheader"
-            textColor="blue"
-            text="Używane biblioteki"
-            textCustomStyle="mt-10"
-          />
+          <Typography fontType="subheader" text="Używane biblioteki" />
           <SkillsListContainer>
             {librariesUsed.map((library, index) => (
               <PointerWithText
                 key={index}
                 text={library}
                 pointerSize="5px"
-                textColor="blue"
                 fontType="body"
                 pointerColor="darkBlue"
               />
@@ -141,13 +121,11 @@ function App() {
         <div className="hidden md:grid grid-cols-2 gap-y-5">
           <Typography
             fontType="subheader"
-            textColor="blue"
             text="Front-end"
             textCustomStyle="mt-10"
           />
           <Typography
             fontType="subheader"
-            textColor="blue"
             text="Używane biblioteki"
             textCustomStyle="mt-10"
           />
@@ -157,7 +135,6 @@ function App() {
                 key={index}
                 text={mainSkill}
                 pointerSize="5px"
-                textColor="blue"
                 fontType="body"
                 pointerColor="darkBlue"
               />
@@ -170,7 +147,6 @@ function App() {
                 key={index}
                 text={library}
                 pointerSize="5px"
-                textColor="blue"
                 fontType="body"
                 pointerColor="darkBlue"
               />
@@ -185,8 +161,7 @@ function App() {
       <Container bgColor="none">
         <PointerWithText
           fontType="subheader"
-          textColor="blue"
-          text={"POBOCZNE UMIEJĘTNOŚCI"}
+          text={"POZOSTAŁE UMIEJĘTNOŚCI"}
           pointerColor="custom"
           pointerCustomStyle="bg-blue-400"
           pointerSize="9px"
@@ -194,7 +169,6 @@ function App() {
         <div className="flex md:hidden flex-col">
           <Typography
             fontType="subheader"
-            textColor="blue"
             text="Back-end"
             textCustomStyle="mt-10"
           />
@@ -204,7 +178,6 @@ function App() {
                 key={index}
                 text={skill}
                 pointerSize="5px"
-                textColor="blue"
                 fontType="body"
                 pointerColor="custom"
                 pointerCustomStyle="bg-blue-400"
@@ -217,7 +190,6 @@ function App() {
           />
           <PointerWithText
             fontType="subheader"
-            textColor="blue"
             text={"OTHER EXPERIENCE"}
             pointerColor="custom"
             pointerCustomStyle="bg-blue-200"
@@ -229,7 +201,6 @@ function App() {
                 key={index}
                 text={skill}
                 pointerSize="5px"
-                textColor="blue"
                 fontType="body"
                 pointerColor="custom"
                 pointerCustomStyle="bg-blue-200"
@@ -240,13 +211,11 @@ function App() {
         <div className="md:grid hidden grid-cols-2">
           <Typography
             fontType="subheader"
-            textColor="blue"
             text="Back-end"
             textCustomStyle="mt-10"
           />
           <Typography
             fontType="subheader"
-            textColor="blue"
             text="Pozostałe doświadczenie"
             textCustomStyle="mt-10"
           />
@@ -256,7 +225,6 @@ function App() {
                 key={index}
                 text={skill}
                 pointerSize="5px"
-                textColor="blue"
                 fontType="body"
                 pointerColor="custom"
                 pointerCustomStyle="bg-blue-400"
@@ -270,7 +238,6 @@ function App() {
                 key={index}
                 text={skill}
                 pointerSize="5px"
-                textColor="blue"
                 fontType="body"
                 pointerColor="custom"
                 pointerCustomStyle="bg-blue-400"

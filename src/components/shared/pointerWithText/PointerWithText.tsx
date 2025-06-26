@@ -4,7 +4,6 @@ import { type PointerWithTextProps } from "./PointerWithTextTypes";
 
 export const PointerWithText = ({
   fontType,
-  textColor,
   text,
   textCustomStyle,
   pointerSize,
@@ -15,7 +14,7 @@ export const PointerWithText = ({
     <div className="flex gap-2.5 items-center ">
       <Pointer
         variant="steady"
-        size={`${pointerSize || "16px"}`}
+        size={`${pointerSize || "9px"}`}
         color={pointerColor}
         customStyle={pointerCustomStyle}
       />
@@ -23,7 +22,6 @@ export const PointerWithText = ({
         text={text}
         fontType={fontType}
         textCustomStyle={textCustomStyle}
-        textColor={textColor}
       />
     </div>
   );

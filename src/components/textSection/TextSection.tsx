@@ -5,17 +5,24 @@ export const TextSection = ({ header, subheader, body }: TextSectionProps) => {
   return (
     <section className="flex flex-col gap-2.5">
       {header && (
-        <Typography fontType="header" textColor="blue" text={header} />
+        <Typography
+          fontType="header"
+          textCustomStyle="text-blue-100"
+          text={header}
+        />
       )}
       {subheader && (
-        <Typography fontType="subheader" textColor="blue" text={subheader} />
+        <Typography
+          fontType="subheader"
+          textCustomStyle="text-blue-100"
+          text={subheader}
+        />
       )}
       {body && (
         <Typography
           fontType="body"
-          textColor="blue"
+          textCustomStyle="mt-5 text-blue-100"
           text={body}
-          textCustomStyle="mt-5"
         />
       )}
     </section>

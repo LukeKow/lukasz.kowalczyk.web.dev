@@ -1,19 +1,12 @@
-import {
-  textColorMap,
-  textTypeMap,
-  type TypographyProps,
-} from "./TypographyTypes";
+import { fontTypeMap, type TypographyProps } from "./TypographyTypes";
 
 export const Typography = ({
   fontType,
-  textColor,
   text,
   textCustomStyle,
 }: TypographyProps) => {
   return (
-    <span
-      className={`${textTypeMap[fontType]} ${textColorMap[textColor]} ${textCustomStyle}`}
-    >
+    <span className={`${fontTypeMap[fontType]} ${textCustomStyle}`}>
       {text}
     </span>
   );

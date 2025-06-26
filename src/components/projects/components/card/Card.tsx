@@ -19,20 +19,17 @@ export const Card = (props: ProjectDetailsData) => {
             pointerCustomStyle={cardTheme.accent}
             text={title}
             fontType="subheader"
-            textColor="custom"
             textCustomStyle={`${cardTheme.text} text-[20px]/[30px] w-fit md:text-[24px]/[36px]`}
           />
           <Typography
             text={role}
             fontType="sideNote"
-            textColor="custom"
             textCustomStyle={`${cardTheme.text}`}
           />
         </div>
         <Typography
           text={description}
           fontType="body"
-          textColor="custom"
           textCustomStyle={`${cardTheme.text}`}
         />
         <Link

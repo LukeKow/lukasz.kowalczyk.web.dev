@@ -1,17 +1,26 @@
+import { NavLink } from "react-router";
 import { Typography } from "../shared/typography/Typography";
-import { Menu } from "./components/menu/Menu";
-import { type TopBarProps } from "./TopBarTypes";
+import { topBatThemeMap, type TopBarProps } from "./TopBarTypes";
 
-export const TopBar = ({ name, color }: TopBarProps) => {
+export const TopBar = ({ color = "blue" }: TopBarProps) => {
+  const cardTheme = topBatThemeMap[color];
+
   return (
-    <div className="h-fit bg-white sticky top-0 lg:px-10 pl-2.5 md:pl-5 py-5 flex w-full justify-between items-center">
-      <Typography
-        text={name}
-        textColor="blue"
-        fontType="custom"
-        textCustomStyle="font-medium text-[24px]/[36px]"
-      />
-      <Menu pointerColor={color || "darkBlue"} />
+    <div
+      className={`${cardTheme} h-fit sticky top-0 lg:px-10 pl-2.5 md:pl-5 py-5 flex w-full gap-5 items-center`}
+    >
+      <NavLink
+        to={"/"}
+        className="px-2.5 py-2.5 gap-2.5 hover:underline underline-offset-4"
+      >
+        <Typography text="Home" fontType="subheader" />
+      </NavLink>
+      <NavLink
+        to={"/projects"}
+        className="px-2.5 py-2.5 gap-2.5 hover:underline underline-offset-4"
+      >
+        <Typography text="Projects" fontType="subheader" />
+      </NavLink>
     </div>
   );
 };
