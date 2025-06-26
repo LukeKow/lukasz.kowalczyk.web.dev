@@ -76,7 +76,7 @@ function App() {
               />
             </div>
             <Typography
-              fontType="body"
+              			fontType="body"
               text="Z wykształcenia jestem programistą z 7 letnim doświadczeniem. Z zainteresowań amatorem fotografii, designu, psychologii i coachingu. Lubię szukać rozwiązań prolemów i ulepszać obecne (rozwiązania, nie problemy ;) )."
             />
           </div>
