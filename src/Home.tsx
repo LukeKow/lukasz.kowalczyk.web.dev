@@ -61,7 +61,7 @@ function App() {
               >
                 <img src={linkedInIcon} />
               </a>
-              <a href="mailto:lukasz.kowalczyk.dev@gmail.com">
+              <a href="mailto:lukasz.kowalczyk.dev@gmail.com?subject=Chcemy Cię zatrudnić!&body=Zaimponował nam Twój profil programisty, a ponieważ szukamy tak wyjątkowych osób jak Ty, chcemy złożyć Ci ofertę współpracy. ;-)">
                 <img src={gmailIcon} />
               </a>
             </div>
