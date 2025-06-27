@@ -1,15 +1,16 @@
 import { TopBar } from "./components/topBar/TopBar";
-
-import igIcon from "./assets/icons/Instagram.svg";
-import linkedInIcon from "./assets/icons/LinkedIn.svg";
-import gmailIcon from "./assets/icons/gmail.svg";
-import me from "./assets/images/me.jpeg";
 import { Container } from "./components/shared/container/Container";
 import { PointerWithText } from "./components/shared/pointerWithText/PointerWithText";
 import { Separator } from "./components/shared/separator/Separator";
 import { SkillsListContainer } from "./components/shared/skillsListContainer/SkillsListContainer";
 import { Typography } from "./components/shared/typography/Typography";
 
+import { GithubIcon } from "./components/shared/icons/GitHubIcon";
+import { InstagramIcon } from "./components/shared/icons/InstagramIcon";
+import { LinkedInIcon } from "./components/shared/icons/LinkedInIcon";
+import { SendMessageIcon } from "./components/shared/icons/SendMessageIcon";
+
+import me from "./assets/images/me_2.jpg";
 import "./home.css";
 
 const mainSkills = ["React", "CSS", "Typescript", "VUE", "Javascript"];
@@ -33,7 +34,7 @@ const otherExperience = ["Flutter", "React Native", "Angular", "Node"];
 function App() {
   return (
     <>
-      <TopBar color="blue" />
+      <TopBar color="white" />
       <div
         id="Home"
         className="mb-5 lg:py-20 flex flex-col lg:items-center bg-blue-700"
@@ -51,18 +52,33 @@ function App() {
                 />
               </div>
             </div>
-            <div className="flex py-5 px-5 gap-5 bg-blue-100 w-full justify-center [&>a]:rounded-xs [&>a]:p-[5px] [&>a]:hover:bg-white">
-              <a href="https://www.instagram.com/lkow.photo/" target="_blank">
-                <img src={igIcon} />
+            <div className="flex py-5 px-5 gap-5 bg-blue-100 w-full justify-center [&>a]:rounded-xs [&>a]:p-[5px]">
+              <a
+                href="https://www.instagram.com/lkow.photo/"
+                target="_blank"
+                className="hover:shadow-md"
+              >
+                <InstagramIcon color="white" />
               </a>
               <a
                 href="https://www.linkedin.com/in/łukasz-kowalczyk-80ab8610b"
                 target="_blank"
+                className="hover:shadow-md"
               >
-                <img src={linkedInIcon} />
+                <LinkedInIcon color="white" />
               </a>
-              <a href="mailto:lukasz.kowalczyk.dev@gmail.com?subject=Chcemy Cię zatrudnić!&body=Zaimponował nam Twój profil programisty, a ponieważ szukamy tak wyjątkowych osób jak Ty, chcemy złożyć Ci ofertę współpracy. ;-)">
-                <img src={gmailIcon} />
+              <a
+                href="mailto:lukasz.kowalczyk.dev@gmail.com?subject=Chcemy Cię zatrudnić!&body=Zaimponował nam Twój profil programisty, a ponieważ szukamy tak wyjątkowych osób jak Ty, chcemy złożyć Ci ofertę współpracy. ;-)"
+                className="hover:shadow-md"
+              >
+                <SendMessageIcon width="25" height="25" color="white" />
+              </a>
+              <a
+                href="https://github.com/LukeKow"
+                target="_blank"
+                className="hover:shadow-md"
+              >
+                <GithubIcon width="25" height="25" color="white" />
               </a>
             </div>
           </div>
