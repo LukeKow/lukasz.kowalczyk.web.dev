@@ -11,7 +11,6 @@ import { LinkedInIcon } from "./components/shared/icons/LinkedInIcon";
 import { SendMessageIcon } from "./components/shared/icons/SendMessageIcon";
 
 import me from "./assets/images/me_2.jpg";
-import "./home.css";
 
 const mainSkills = ["React", "CSS", "Typescript", "VUE", "Javascript"];
 const librariesUsed = [
@@ -29,7 +28,7 @@ const librariesUsed = [
   "cypress",
 ];
 const backendSkills = ["C#", ".NET Core", "Entity Framework", "Node"];
-const otherExperience = ["Flutter", "React Native", "Angular", "Node"];
+const otherExperience = ["Flutter", "React Native", "Angular"];
 
 function App() {
   return (
@@ -37,10 +36,10 @@ function App() {
       <TopBar color="white" />
       <div
         id="Home"
-        className="mb-5 lg:py-20 flex flex-col lg:items-center bg-blue-700"
+        className="pb-10 pt-5 lg:py-20 flex flex-col lg:items-center bg-blue-700"
       >
-        <section className="md:bg-white lg:shadow-md lg:max-w-[50%] flex flex-col lg:flex-row mx-2.5 md:mx-5 gap-10 lg:gap-0">
-          <div className="w-full shadow-md md:shadow-none lg:w-[50%] lg:max-w-[350px] lg:flex lg:flex-col lg:justify-center">
+        <section className="md:bg-white lg:shadow-md lg:max-w-[50%] flex flex-col lg:flex-row md:mx-5 gap-10 lg:gap-0">
+          <div className="w-full shadow-md md:shadow-none px-2.5 lg:w-[50%] lg:max-w-[350px] lg:flex lg:flex-col lg:justify-center">
             <div className="py-5 px-2.5 md:px-5 flex flex-col items-center justify-center gap-5 bg-white w-full">
               <img src={me} className="w-full max-w-[385px]" />
               <div className="flex flex-col justify-center">
@@ -82,7 +81,7 @@ function App() {
               </a>
             </div>
           </div>
-          <div className="w-full flex flex-col gap-[30px] py-10 px-2.5 md:px-5  lg:w-[50%] lg:max-w-[350px]">
+          <div className="w-full bg-white flex flex-col gap-[30px] py-10 px-5 md:px-5  lg:w-[50%] lg:max-w-[350px]">
             <div className="flex flex-col gap-2.5">
               <Typography fontType="header" text="Cześć" />
               <Typography
@@ -173,7 +172,7 @@ function App() {
           separatorCustomStyle="hidden md:block my-10 md:w-[25%]"
         />
       </Container>
-      <Container bgColor="none">
+      <Container bgColor="none" className="mb-[80px] md:mb-0 shadow-md">
         <PointerWithText
           fontType="subheader"
           text={"POZOSTAŁE UMIEJĘTNOŚCI"}

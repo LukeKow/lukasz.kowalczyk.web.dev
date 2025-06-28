@@ -9,7 +9,7 @@ export const TopBar = ({ color }: TopBarProps) => {
   return (
     <>
       <div
-        className={`${cardTheme} h-fit sticky top-0 lg:px-10 pl-2.5 md:pl-5 py-5 hidden md:flex w-full gap-5`}
+        className={`${cardTheme} h-fit shadow-md sticky top-0 lg:px-10 pl-2.5 md:pl-5 py-5 hidden md:flex w-full gap-5`}
       >
         <NavLink
           to={"/"}
