@@ -2,6 +2,7 @@ import { NavLink } from "react-router";
 import { Typography } from "../shared/typography/Typography";
 import { topBatThemeMap, type TopBarProps } from "./TopBarTypes";
 import { Menu } from "./components/menu/Menu";
+import { Toggle } from "./components/toggle/Toggle";
 
 export const TopBar = ({ color }: TopBarProps) => {
   const cardTheme = topBatThemeMap[color];
@@ -23,6 +24,7 @@ export const TopBar = ({ color }: TopBarProps) => {
         >
           <Typography text="Projects" fontType="thinSubHeader" />
         </NavLink>
+        <Toggle onToggle={() => console.log("TOGGLE")} />
       </div>
       <div className="md:hidden fixed bottom-0 w-full py-[15px] flex justify-center bg-white">
         <Menu menuTheme={color} />
