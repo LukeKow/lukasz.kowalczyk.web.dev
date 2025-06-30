@@ -10,10 +10,8 @@ export const GithubIcon = ({
     <svg
       height={height}
       width={width}
-      aria-hidden="true"
       viewBox="0 0 24 24"
-      version="1.1"
-      data-view-component="true"
+      xmlns="http://www.w3.org/2000/svg"
     >
       <title>GitHub</title>
       <path
