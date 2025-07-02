@@ -1,7 +1,7 @@
 import {
   pointerColorMap,
   type PointerColor,
-} from "../../topBar/components/pointer/PointerTypes";
+} from "../../bottomBar/components/pointer/PointerTypes";
 
 export type SeparatorColor = PointerColor;
 

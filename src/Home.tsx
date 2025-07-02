@@ -1,4 +1,4 @@
-import { TopBar } from "./components/topBar/TopBar";
+import { BottomBar } from "./components/bottomBar/BottomBar";
 import { Container } from "./components/shared/container/Container";
 import { PointerWithText } from "./components/shared/pointerWithText/PointerWithText";
 import { Separator } from "./components/shared/separator/Separator";
@@ -33,7 +33,7 @@ const otherExperience = ["Flutter", "React Native", "Angular"];
 function App() {
   return (
     <>
-      <TopBar color="white" />
+      <BottomBar color="white" />
       <div
         id="Home"
         className="pb-10 pt-5 lg:py-20 flex flex-col lg:items-center bg-blue-700"

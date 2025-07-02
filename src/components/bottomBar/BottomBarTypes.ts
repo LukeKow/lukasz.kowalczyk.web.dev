@@ -1,17 +1,17 @@
 import type { MainTheme } from "../shared/SharedTypes";
 
-export interface TopBarProps {
+export interface BottomBarProps {
   color: MainTheme;
 }
 
-export type TopBarTheme = {
+export type BottomBarTheme = {
   text: string;
   bg: string;
   accent: string;
   accentBg?: string;
 };
 
-export const topBarThemeMap: Record<MainTheme, TopBarTheme> = {
+export const bottomBarThemeMap: Record<MainTheme, BottomBarTheme> = {
   black: {
     text: "text-white",
     bg: "bg-black",

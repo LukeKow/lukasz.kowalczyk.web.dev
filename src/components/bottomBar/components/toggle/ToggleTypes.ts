@@ -1,4 +1,4 @@
-import type { TopBarTheme as ToggleTheme } from "../../TopBarTypes";
+import type { BottomBarTheme as ToggleTheme } from "../../BottomBarTypes";
 
 export interface ToggleProps {
   onToggle: (havingFun: boolean) => void;

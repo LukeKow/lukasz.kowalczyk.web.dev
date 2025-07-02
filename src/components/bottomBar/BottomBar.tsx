@@ -1,16 +1,16 @@
 import { NavLink } from "react-router";
 import { Typography } from "../shared/typography/Typography";
-import { topBarThemeMap, type TopBarProps } from "./TopBarTypes";
+import { bottomBarThemeMap, type BottomBarProps } from "./BottomBarTypes";
 import { Menu } from "./components/menu/Menu";
 import { Toggle } from "./components/toggle/Toggle";
 
-export const TopBar = ({ color }: TopBarProps) => {
-  const topBarTheme = topBarThemeMap[color];
+export const BottomBar = ({ color }: BottomBarProps) => {
+  const bottomBarTheme = bottomBarThemeMap[color];
 
   return (
     <>
       <div
-        className={`${topBarTheme.bg} ${topBarTheme.text} h-fit shadow-md sticky top-0 lg:px-10 pl-2.5 md:pl-5 py-5 hidden md:flex w-full justify-between items-center`}
+        className={`${bottomBarTheme.bg} ${bottomBarTheme.text} h-fit shadow-md sticky top-0 lg:px-10 pl-2.5 md:pl-5 py-5 hidden md:flex w-full justify-between items-center`}
       >
         <div className="flex gap-5">
           <NavLink
@@ -26,10 +26,10 @@ export const TopBar = ({ color }: TopBarProps) => {
             <Typography text="Projects" fontType="thinSubHeader" />
           </NavLink>
         </div>
-        <div className={`${topBarTheme.accent} h-fit`}>
+        <div className={`${bottomBarTheme.accent} h-fit`}>
           <Toggle
             onToggle={() => console.log("Toggle")}
-            toggleTheme={topBarTheme}
+            toggleTheme={bottomBarTheme}
           />
         </div>
       </div>

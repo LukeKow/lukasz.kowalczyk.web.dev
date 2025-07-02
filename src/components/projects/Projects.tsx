@@ -1,6 +1,6 @@
 import { PointerWithText } from "../shared/pointerWithText/PointerWithText";
 import { Typography } from "../shared/typography/Typography";
-import { TopBar } from "../topBar/TopBar";
+import { BottomBar } from "../bottomBar/BottomBar";
 import { Card } from "./components/card/Card";
 
 import car from "../../assets/images/car.jpg";
@@ -59,7 +59,7 @@ const projects: ProjectDetailsProps[] = [
 export const Projects = () => {
   return (
     <>
-      <TopBar color="blue" />
+      <BottomBar color="blue" />
       <div className="flex flex-col gap-10 items-center pb-20 mt-5 md:mt-20">
         <div className="px-5 flex flex-col gap-2.5 w-full max-w-[706px] mx-auto">
           <PointerWithText

@@ -5,8 +5,8 @@ import {
 } from "./ProjectDetailsTypes";
 import { Typography } from "../../../shared/typography/Typography";
 import { Separator } from "../../../shared/separator/Separator";
-import type { PointerColor } from "../../../topBar/components/pointer/PointerTypes";
-import { TopBar } from "../../../topBar/TopBar";
+import type { PointerColor } from "../../../bottomBar/components/pointer/PointerTypes";
+import { BottomBar } from "../../../bottomBar/BottomBar";
 import { useLocation } from "react-router";
 
 export const ProjectDetails = () => {
@@ -16,7 +16,7 @@ export const ProjectDetails = () => {
   const cardTheme = projectThemeColorMap[theme];
   return (
     <>
-      <TopBar color={cardTheme.topBarTheme} />
+      <BottomBar color={cardTheme.topBarTheme} />
       <div className="w-full flex justify-center pb-20">
         <div
           className={`${cardTheme.background} w-full md:max-w-[706px] shadow-md mt-5 md:mt-20`}

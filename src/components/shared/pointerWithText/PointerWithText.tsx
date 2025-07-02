@@ -1,4 +1,4 @@
-import { Pointer } from "../../topBar/components/pointer/Pointer";
+import { Pointer } from "../../bottomBar/components/pointer/Pointer";
 import { Typography } from "../typography/Typography";
 import { type PointerWithTextProps } from "./PointerWithTextTypes";
 
