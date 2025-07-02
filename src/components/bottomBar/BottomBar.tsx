@@ -33,7 +33,7 @@ export const BottomBar = ({ color }: BottomBarProps) => {
           />
         </div>
       </div>
-      <div className="md:hidden fixed bottom-0 w-full py-[15px] flex justify-center bg-white">
+      <div className="md:hidden fixed bottom-0 w-full pt-[15px] pb-safe flex justify-center bg-white">
         <Menu />
       </div>
     </>

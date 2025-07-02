@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev-host": "vite --host",
     "build": "tsc -b && vite build",
     "lint": "eslint \"src/**/*.{js,ts,tsx}\" --fix",
     "format": "prettier --write \"**/*.{js,ts,tsx,css,md,json}\"",

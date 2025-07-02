@@ -11,7 +11,7 @@ export const MenuOverlay = ({ onClose }: MenuOverlayProps) => {
     onClose();
   };
   return (
-    <div className="fixed top-0 left-0 w-screen h-screen flex flex-col justify-between bg-[rgba(0,0,0,0.5)]">
+    <div className="fixed touch-none top-0 left-0 w-screen h-full pb-safe flex flex-col justify-between items-stretch bg-[rgba(0,0,0,0.5)]">
       <div className="h-full pb-30 pl-5 flex flex-col gap-5 justify-center bg-white w-4/6">
         <NavLink to="/projects" onClick={onClose} className="px-2.5 py-2.5">
           <PointerWithText
@@ -28,7 +28,7 @@ export const MenuOverlay = ({ onClose }: MenuOverlayProps) => {
           />
         </NavLink>
       </div>
-      <div className=" w-full h-fit py-[15px] flex justify-center bottom-bar-gradient">
+      <div className=" w-full py-[15px] flex justify-center bottom-bar-gradient">
         <button onClick={handleItemClick} className="py-2.5 px-5 text-blue-700">
           <CloseIcon />
         </button>
