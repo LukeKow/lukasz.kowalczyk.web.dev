@@ -20,26 +20,26 @@ export const cardThemeColorMap: Record<MainTheme, CardTheme> = {
   blue: {
     background: "bg-blue-100",
     text: "text-blue-900",
-    accent: "bg-blue-700",
+    accent: "text-blue-700",
   },
   orange: {
     background: "bg-orange-100",
     text: "text-orange-900",
-    accent: "bg-orange-700",
+    accent: "text-orange-700",
   },
   pink: {
     background: "bg-pink-100",
     text: "text-pink-900",
-    accent: "bg-pink-700",
+    accent: "text-pink-700",
   },
   white: {
     background: "bg-white",
     text: "text-black",
-    accent: "bg-black",
+    accent: "text-black",
   },
   black: {
     background: "bg-black",
     text: "text-white",
-    accent: "bg-white",
+    accent: "text-white",
   },
 };

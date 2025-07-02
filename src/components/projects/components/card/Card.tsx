@@ -15,8 +15,7 @@ export const Card = (props: ProjectDetailsData) => {
         <div className="flex flex-col gap-0">
           <PointerWithText
             pointerSize="10px"
-            pointerColor="custom"
-            pointerCustomStyle={cardTheme.accent}
+            pointerColor={color}
             text={title}
             fontType="subheader"
             textCustomStyle={`${cardTheme.text} text-[20px]/[30px] w-fit md:text-[24px]/[36px]`}
@@ -37,15 +36,16 @@ export const Card = (props: ProjectDetailsData) => {
           state={{ projectDetails: props }}
         >
           <button
-            className="flex justify-end w-full gap-2.5 
-					hover:cursor-pointer
-					hover:[&>svg]:[&>rect]:nth-2:w-[1px] 
-					hover:[&>svg]:[&>rect]:nth-2:h-[1px]
-					hover:[&>svg]:[&>rect]:nth-2:translate-[0px]
-					"
+            className={`
+						${cardTheme.accent} flex justify-end w-full gap-2.5 
+						hover:cursor-pointer
+						hover:[&>svg]:[&>rect]:nth-2:w-[1px] 
+						hover:[&>svg]:[&>rect]:nth-2:h-[1px]
+						hover:[&>svg]:[&>rect]:nth-2:translate-[0px]
+					`}
           >
             <span className={`${cardTheme.text}`}>Details</span>
-            <DetailsIcon width="25" height="25" color={color} />
+            <DetailsIcon width="25" height="25" />
           </button>
         </Link>
       </div>

@@ -1,21 +1,10 @@
+import { SmallSquareIcon } from "../../../shared/icons/SmallSquareIcon";
 import { pointerColorMap, type PointerProps } from "./PointerTypes";
 
-export const Pointer = (props: PointerProps) => {
+export const Pointer = ({ size, color, customStyle }: PointerProps) => {
   return (
-    <>
-      {props.variant === "animated" ? (
-        <div
-          className={`${props.customStyle} ${pointerColorMap[props.color]} h-[5px] duration-500 transition-all ease-in-out hover:w-[25px]`}
-        />
-      ) : (
-        <div
-          className={`${props.customStyle} ${pointerColorMap[props.color]}`}
-          style={{
-            width: props.size,
-            height: props.size,
-          }}
-        />
-      )}
-    </>
+    <div className={`${customStyle} ${pointerColorMap[color]}`}>
+      <SmallSquareIcon width={size} height={size} />
+    </div>
   );
 };

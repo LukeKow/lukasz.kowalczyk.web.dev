@@ -1,18 +1,12 @@
-import { iconThemeColorMap, type IconProps } from "./IconTypes";
+import { type IconProps } from "./IconTypes";
 
-export const InstagramIcon = ({
-  height = "24",
-  width = "24",
-  color,
-}: IconProps) => {
-  const { fill } = iconThemeColorMap[color];
-
+export const InstagramIcon = ({ height = "24", width = "24" }: IconProps) => {
   return (
     <svg
       width={width}
       height={height}
       viewBox="0 0 24 24"
-      className={fill}
+      fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>Instagram</title>

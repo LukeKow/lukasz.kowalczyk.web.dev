@@ -19,13 +19,13 @@ export const ProjectDetails = () => {
       <TopBar color={cardTheme.topBarTheme} />
       <div className="w-full flex justify-center pb-20">
         <div
-          className={`${cardTheme.background} w-full md:max-w-[706px] shadow-md`}
+          className={`${cardTheme.background} w-full md:max-w-[706px] shadow-md mt-5 md:mt-20`}
         >
           <div className="flex flex-col gap-5 pt-5 pb-10">
             <div className="flex flex-col gap-0 pl-2.5 md:px-5">
               <PointerWithText
                 pointerSize="10px"
-                pointerColor="custom"
+                pointerColor={theme}
                 pointerCustomStyle={cardTheme.accent}
                 text={title}
                 fontType="subheader"
@@ -79,7 +79,7 @@ export const ProjectDetails = () => {
                   <PointerWithText
                     key={index}
                     pointerSize="10px"
-                    pointerColor="custom"
+                    pointerColor={theme}
                     pointerCustomStyle={cardTheme.accent}
                     text={tool}
                     fontType="body"

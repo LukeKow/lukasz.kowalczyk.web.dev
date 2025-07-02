@@ -1,12 +1,6 @@
-import { iconThemeColorMap, type IconProps } from "./IconTypes";
+import { type IconProps } from "./IconTypes";
 
-export const SendMessageIcon = ({
-  width = "79",
-  height = "79",
-  color,
-}: IconProps) => {
-  const { fill } = iconThemeColorMap[color];
-
+export const SendMessageIcon = ({ width = "79", height = "79" }: IconProps) => {
   return (
     <svg
       width={width}
@@ -17,7 +11,7 @@ export const SendMessageIcon = ({
       <title>Send message</title>
       <path
         d="M21 50.5L0 29.5L79 0L50 79L29.5 58L63 16L21 50.5Z"
-        className={fill}
+        fill="currentColor"
       />
     </svg>
   );

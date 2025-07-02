@@ -8,26 +8,19 @@ export type PointerColor =
   | "custom";
 
 export const pointerColorMap: Record<PointerColor, string> = {
-  lightBlue: "bg-blue-500",
-  blue: "bg-blue-700",
-  orange: "bg-orange-700",
-  lightOrange: "bg-orange-500",
-  pink: "bg-pink-700",
-  lightPink: "bg-pink-500",
-  black: "bg-black",
-  white: "bg-white",
+  lightBlue: "text-blue-500",
+  blue: "text-blue-700",
+  orange: "text-orange-700",
+  lightOrange: "text-orange-500",
+  pink: "text-pink-700",
+  lightPink: "text-pink-500",
+  black: "text-white",
+  white: "text-black",
   custom: "",
 };
 
-export type PointerProps =
-  | {
-      color: PointerColor;
-      customStyle?: string;
-      variant: "animated";
-    }
-  | {
-      color: PointerColor;
-      customStyle?: string;
-      size: string;
-      variant: "steady";
-    };
+export interface PointerProps {
+  color: PointerColor;
+  customStyle?: string;
+  size?: string;
+}

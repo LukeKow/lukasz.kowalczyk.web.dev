@@ -1,14 +1,44 @@
+import { useState } from "react";
+import { StandardMoodIcon } from "../../../shared/icons/StandardMoodIcon";
 import { type ToggleProps } from "./ToggleTypes";
+import { NotSoSeriousMood } from "../../../shared/icons/NotSoSeriousMoodIcon";
 
-export const Toggle = ({ onToggle }: ToggleProps) => {
+export const Toggle = ({ onToggle, toggleTheme }: ToggleProps) => {
+  const [havingFun, setHavingFun] = useState(false);
+
+  const handleToggle = () => {
+    const updatedFun = !havingFun;
+    setHavingFun(updatedFun);
+    onToggle(updatedFun);
+  };
   return (
-    <label className="relative inline-block w-16 h-9">
-      <input
-        type="checkbox"
-        className="opacity-0 w-0 h-0 peer"
-        onChange={onToggle}
-      />
-      <span className="peer-checked:bg-blue-700 peer-focus:shadow-md peer-checked:before:translate-x-6 before:absolute before:content-[''] before:h-6 before:w-6 before:left-1 before:bottom-1 before:bg-white before:duration-500 absolute cursor-pointer top-0 left-0 bottom-0 right-0 bg-blue-300 duration-500"></span>
-    </label>
+    <div className="relative">
+      <label
+        className={`${toggleTheme.accentBg || toggleTheme.bg} inset-shadow-sm/50 peer relative inline-block w-16 h-8 cursor-pointer rounded-l-full rounded-r-full`}
+      >
+        <input
+          type="checkbox"
+          className="opacity-0 w-0 h-0 peer"
+          onChange={handleToggle}
+        />
+        <span className="absolute top-0 left-0 right-0 bottom-0 peer-checked:hidden peer:not-checked:inline duration-500 transition-all ease-in-out">
+          <StandardMoodIcon
+            className="absolute top-1 left-1  rounded-l-full rounded-r-full shadow-md/50"
+            width="24"
+            height="24"
+          />
+        </span>
+        <span className="absolute top-0 left-0 right-0 bottom-0 peer-not-checked:hidden peer:checked:inline ">
+          <NotSoSeriousMood
+            className="absolute top-1 right-1  rounded-l-full rounded-r-full shadow-md/50"
+            width="25"
+            height="25"
+          />
+        </span>
+      </label>
+      <span className="select-none hidden peer-hover:absolute peer-hover:inline -top-5 left-0 whitespace-nowrap">
+        Zmień styl
+      </span>
+    </div>
   );
 };

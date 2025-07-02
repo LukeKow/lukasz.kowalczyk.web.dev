@@ -2,6 +2,8 @@
 @import "tailwindcss";
 
 @theme {
+  --tw-shadow-color: #000;
+
   --color-pink-100: #fffafb;
   --color-pink-200: #fccfd3;
   --color-pink-300: #f9a9b0;

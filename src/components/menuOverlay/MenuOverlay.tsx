@@ -29,8 +29,8 @@ export const MenuOverlay = ({ onClose }: MenuOverlayProps) => {
         </NavLink>
       </div>
       <div className=" w-full h-fit py-[15px] flex justify-center bottom-bar-gradient">
-        <button onClick={handleItemClick} className="py-2.5 px-5">
-          <CloseIcon color="blue" />
+        <button onClick={handleItemClick} className="py-2.5 px-5 text-blue-700">
+          <CloseIcon />
         </button>
       </div>
     </div>

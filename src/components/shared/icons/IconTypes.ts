@@ -3,7 +3,8 @@ import type { MainTheme } from "../SharedTypes";
 export interface IconProps {
   width?: string;
   height?: string;
-  color: MainTheme;
+  color?: MainTheme;
+  className?: React.HTMLAttributes<SVGElement>["className"];
 }
 
 export type IconTheme = {

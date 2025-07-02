@@ -12,12 +12,9 @@ export const PointerWithText = ({
 }: PointerWithTextProps) => {
   return (
     <div className="flex gap-2.5 items-center ">
-      <Pointer
-        variant="steady"
-        size={`${pointerSize || "9px"}`}
-        color={pointerColor}
-        customStyle={pointerCustomStyle}
-      />
+      <div className={pointerCustomStyle}>
+        <Pointer color={pointerColor} size={pointerSize} />
+      </div>
       <Typography
         text={text}
         fontType={fontType}

@@ -10,5 +10,12 @@ export default meta;
 type Story = StoryObj<typeof Toggle>;
 
 export const Primary: Story = {
-  args: {},
+  args: {
+    toggleTheme: {
+      text: "text-blue-900",
+      accent: "text-blue-700",
+      bg: "bg-blue-100",
+      accentBg: "bg-blue-100",
+    },
+  },
 };
