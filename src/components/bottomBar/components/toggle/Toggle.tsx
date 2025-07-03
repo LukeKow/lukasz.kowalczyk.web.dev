@@ -1,14 +1,14 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { StandardMoodIcon } from "../../../shared/icons/StandardMoodIcon";
 import { type ToggleProps } from "./ToggleTypes";
 import { NotSoSeriousMood } from "../../../shared/icons/NotSoSeriousMoodIcon";
+import { FunContext } from "../../../../funContext";
 
 export const Toggle = ({ onToggle, toggleTheme }: ToggleProps) => {
-  const [havingFun, setHavingFun] = useState(false);
+  const havingFun = useContext(FunContext);
 
   const handleToggle = () => {
     const updatedFun = !havingFun;
-    setHavingFun(updatedFun);
     onToggle(updatedFun);
   };
   return (

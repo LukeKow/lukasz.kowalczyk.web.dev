@@ -10,5 +10,8 @@ export default meta;
 type Story = StoryObj<typeof BottomBar>;
 
 export const Primary: Story = {
-  args: {},
+  args: {
+    color: "blue",
+    onToggleContext: () => {},
+  },
 };

@@ -11,6 +11,10 @@ import { LinkedInIcon } from "./components/shared/icons/LinkedInIcon";
 import { SendMessageIcon } from "./components/shared/icons/SendMessageIcon";
 
 import me from "./assets/images/me_2.jpg";
+import happyMe from "./assets/images/me.jpeg";
+
+import { useState } from "react";
+import { FunContext } from "./funContext";
 
 const mainSkills = ["React", "CSS", "Typescript", "VUE", "Javascript"];
 const librariesUsed = [
@@ -31,9 +35,11 @@ const backendSkills = ["C#", ".NET Core", "Entity Framework", "Node"];
 const otherExperience = ["Flutter", "React Native", "Angular"];
 
 function App() {
+  const [funContext, setFunContext] = useState(false);
+
   return (
-    <>
-      <BottomBar color="white" />
+    <FunContext value={funContext}>
+      <BottomBar onToggleContext={setFunContext} color="white" />
       <div
         id="Home"
         className="pb-10 pt-5 lg:py-20 flex flex-col lg:items-center bg-blue-700"
@@ -41,7 +47,10 @@ function App() {
         <section className="md:bg-white lg:shadow-md lg:max-w-[50%] flex flex-col lg:flex-row md:mx-5 gap-10 lg:gap-0">
           <div className="w-full shadow-md md:shadow-none px-2.5 lg:w-[50%] lg:max-w-[350px] lg:flex lg:flex-col lg:justify-center">
             <div className="py-5 px-2.5 md:px-5 flex flex-col items-center justify-center gap-5 bg-white w-full">
-              <img src={me} className="w-full max-w-[385px]" />
+              <img
+                src={funContext ? happyMe : me}
+                className="w-full max-w-[385px]"
+              />
               <div className="flex flex-col justify-center">
                 <Typography text="Łukasz Kowalczyk" fontType="subheader" />
                 <Typography
@@ -249,7 +258,7 @@ function App() {
           </SkillsListContainer>
         </div>
       </Container>
-    </>
+    </FunContext>
   );
 }
 

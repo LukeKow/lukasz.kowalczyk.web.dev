@@ -4,13 +4,14 @@ import { bottomBarThemeMap, type BottomBarProps } from "./BottomBarTypes";
 import { Menu } from "./components/menu/Menu";
 import { Toggle } from "./components/toggle/Toggle";
 
-export const BottomBar = ({ color }: BottomBarProps) => {
+//TODO actually it is bottom bar but only on mobile XD - this components needs to be updated
+export const BottomBar = ({ color, onToggleContext }: BottomBarProps) => {
   const bottomBarTheme = bottomBarThemeMap[color];
 
   return (
     <>
       <div
-        className={`${bottomBarTheme.bg} ${bottomBarTheme.text} h-fit shadow-md sticky top-0 lg:px-10 pl-2.5 md:pl-5 py-5 hidden md:flex w-full justify-between items-center`}
+        className={`${bottomBarTheme.bg} ${bottomBarTheme.text} h-fit shadow-md sticky top-0 md:px-10 pl-2.5 md:pl-5 py-5 hidden md:flex w-full justify-between items-center`}
       >
         <div className="flex gap-5">
           <NavLink
@@ -26,12 +27,11 @@ export const BottomBar = ({ color }: BottomBarProps) => {
             <Typography text="Projects" fontType="thinSubHeader" />
           </NavLink>
         </div>
-        <div className={`${bottomBarTheme.accent} h-fit`}>
-          <Toggle
-            onToggle={() => console.log("Toggle")}
-            toggleTheme={bottomBarTheme}
-          />
-        </div>
+        {onToggleContext && (
+          <div className={`${bottomBarTheme.accent} h-fit`}>
+            <Toggle onToggle={onToggleContext} toggleTheme={bottomBarTheme} />
+          </div>
+        )}
       </div>
       <div className="md:hidden fixed bottom-0 w-full pt-[15px] pb-safe flex justify-center bg-white">
         <Menu />

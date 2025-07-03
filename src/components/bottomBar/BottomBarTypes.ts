@@ -2,6 +2,7 @@ import type { MainTheme } from "../shared/SharedTypes";
 
 export interface BottomBarProps {
   color: MainTheme;
+  onToggleContext?: (funContext: boolean) => void;
 }
 
 export type BottomBarTheme = {
