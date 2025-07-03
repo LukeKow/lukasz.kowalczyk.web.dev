@@ -5,7 +5,6 @@ import {
 } from "./ProjectDetailsTypes";
 import { Typography } from "../../../shared/typography/Typography";
 import { Separator } from "../../../shared/separator/Separator";
-import type { PointerColor } from "../../../bottomBar/components/pointer/PointerTypes";
 import { BottomBar } from "../../../bottomBar/BottomBar";
 import { useLocation } from "react-router";
 
