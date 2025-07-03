@@ -20,7 +20,7 @@ export const pointerColorMap: Record<PointerColor, string> = {
 };
 
 export interface PointerProps {
-  color: PointerColor;
+  color?: PointerColor;
   customStyle?: string;
   size?: string;
 }

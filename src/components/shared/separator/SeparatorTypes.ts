@@ -7,6 +7,6 @@ export type SeparatorColor = PointerColor;
 
 export const separatorColorMap = pointerColorMap;
 export interface SeparatorProps {
-  color: SeparatorColor;
+  color?: SeparatorColor;
   separatorCustomStyle?: string;
 }

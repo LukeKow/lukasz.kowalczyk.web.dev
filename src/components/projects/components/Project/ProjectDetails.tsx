@@ -51,10 +51,7 @@ export const ProjectDetails = () => {
                 fontType="body"
                 textCustomStyle={`${cardTheme.text}`}
               />
-              <Separator
-                color={cardTheme.accent as PointerColor}
-                separatorCustomStyle="my-5"
-              />
+              <Separator separatorCustomStyle={`my-5 ${cardTheme.accent}`} />
               <Typography
                 text="Czym się zajmowałem"
                 fontType="subheader"
@@ -65,10 +62,7 @@ export const ProjectDetails = () => {
                 fontType="body"
                 textCustomStyle={`${cardTheme.text}`}
               />
-              <Separator
-                color={cardTheme.separator}
-                separatorCustomStyle="my-5"
-              />
+              <Separator separatorCustomStyle={`my-5 ${cardTheme.accent}`} />
               <Typography
                 text="Narzędzia, których używałem"
                 fontType="subheader"

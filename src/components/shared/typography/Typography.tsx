@@ -1,5 +1,6 @@
 import { fontTypeMap, type TypographyProps } from "./TypographyTypes";
 
+// TODO: Think about creating separate components for Typography's fontType
 export const Typography = ({
   fontType,
   text,

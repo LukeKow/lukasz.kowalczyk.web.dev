@@ -2,6 +2,8 @@ import { Pointer } from "../../bottomBar/components/pointer/Pointer";
 import { Typography } from "../typography/Typography";
 import { type PointerWithTextProps } from "./PointerWithTextTypes";
 
+//TODO simplify this component it's weird and messy... XD
+
 export const PointerWithText = ({
   fontType,
   text,
@@ -13,7 +15,11 @@ export const PointerWithText = ({
   return (
     <div className="flex gap-2.5 items-center ">
       <div className={pointerCustomStyle}>
-        <Pointer color={pointerColor} size={pointerSize} />
+        <Pointer
+          color={pointerColor}
+          size={pointerSize}
+          customStyle={pointerCustomStyle}
+        />
       </div>
       <Typography
         text={text}

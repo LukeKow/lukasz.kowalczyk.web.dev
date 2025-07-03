@@ -130,7 +130,7 @@ function App() {
               />
             ))}
           </SkillsListContainer>
-          <Separator color="blue" separatorCustomStyle="my-10" />
+          <Separator separatorCustomStyle="bg-blue-700 my-10" />
         </div>
         <div className="hidden md:grid grid-cols-2 gap-y-5">
           <Typography
@@ -167,17 +167,14 @@ function App() {
             ))}
           </SkillsListContainer>
         </div>
-        <Separator
-          color="blue"
-          separatorCustomStyle="hidden md:block my-10 md:w-[25%]"
-        />
+        <Separator separatorCustomStyle="hidden md:block bg-blue-700 my-10 md:w-[25%]" />
       </Container>
       <Container bgColor="none" className="mb-[80px] md:mb-0 shadow-md">
         <PointerWithText
           fontType="subheader"
           text={"POZOSTAŁE UMIEJĘTNOŚCI"}
           pointerColor="custom"
-          pointerCustomStyle="bg-blue-400"
+          pointerCustomStyle="text-blue-400"
           pointerSize="9px"
         />
         <div className="flex md:hidden flex-col">
@@ -193,21 +190,15 @@ function App() {
                 text={skill}
                 pointerSize="5px"
                 fontType="body"
-                pointerColor="custom"
-                pointerCustomStyle="bg-blue-400"
+                pointerCustomStyle="text-blue-400"
               />
             ))}
           </SkillsListContainer>
-          <Separator
-            color={"custom"}
-            separatorCustomStyle="bg-blue-400 my-10"
-          />
+          <Separator separatorCustomStyle="bg-blue-400 my-10" />
           <PointerWithText
             fontType="subheader"
-            text={"OTHER EXPERIENCE"}
-            pointerColor="custom"
-            pointerCustomStyle="bg-blue-200"
-            textCustomStyle=""
+            text={"POZOSTAŁE DOŚWIADCZENIE"}
+            pointerCustomStyle="text-blue-200"
           />
           <SkillsListContainer>
             {otherExperience.map((skill, index) => (
@@ -217,7 +208,7 @@ function App() {
                 pointerSize="5px"
                 fontType="body"
                 pointerColor="custom"
-                pointerCustomStyle="bg-blue-200"
+                pointerCustomStyle="text-blue-200"
               />
             ))}
           </SkillsListContainer>
@@ -240,8 +231,7 @@ function App() {
                 text={skill}
                 pointerSize="5px"
                 fontType="body"
-                pointerColor="custom"
-                pointerCustomStyle="bg-blue-400"
+                pointerCustomStyle="text-blue-400"
               />
             ))}
           </SkillsListContainer>
@@ -253,8 +243,7 @@ function App() {
                 text={skill}
                 pointerSize="5px"
                 fontType="body"
-                pointerColor="custom"
-                pointerCustomStyle="bg-blue-400"
+                pointerCustomStyle="text-blue-400"
               />
             ))}
           </SkillsListContainer>

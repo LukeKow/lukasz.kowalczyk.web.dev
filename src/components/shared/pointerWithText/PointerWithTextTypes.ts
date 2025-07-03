@@ -3,6 +3,6 @@ import type { TypographyProps } from "../typography/TypographyTypes";
 
 export interface PointerWithTextProps extends TypographyProps {
   pointerSize?: string;
-  pointerColor: PointerColor;
+  pointerColor?: PointerColor;
   pointerCustomStyle?: string;
 }
