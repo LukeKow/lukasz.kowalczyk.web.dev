@@ -15,6 +15,8 @@ import happyMe from "./assets/images/me.jpeg";
 
 import { useState } from "react";
 import { FunContext } from "./funContext";
+import { Toggle } from "./components/bottomBar/components/toggle/Toggle";
+import { bottomBarThemeMap } from "./components/bottomBar/BottomBarTypes";
 
 const mainSkills = ["React", "CSS", "Typescript", "VUE", "Javascript"];
 const librariesUsed = [
@@ -58,6 +60,12 @@ function App() {
                   fontType="body"
                   textCustomStyle="text-center"
                 />
+                <div className="text-blue-700 w-fit ml-auto mr-auto mt-10 md:hidden">
+                  <Toggle
+                    onToggle={setFunContext}
+                    toggleTheme={bottomBarThemeMap["white"]}
+                  />
+                </div>
               </div>
             </div>
             <div className="flex py-5 px-5 gap-5 bg-blue-100 w-full justify-center [&>a]:rounded-xs [&>a]:p-[5px]">
