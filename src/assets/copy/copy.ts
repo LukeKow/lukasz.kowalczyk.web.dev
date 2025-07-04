@@ -2,7 +2,7 @@ const fun: FunContextTheme = {
   copy: {
     jobTitle: "Pangular hunter",
     aboutMe:
-      "Od 7 lat poluję na Pangulary. Przez lata czajenia się w krzakach zdobyłem niemałe doświadczenie i mnóstwo unikatowych dropów. Chociaż straciłem lewego kciuka i prawą stopę świetnie sobie radzę, mam wyjątkowe skillzy i nieprzerwanie expię. Ostatnio wbiłem nowy level i już nie tracę całego HP po zjedzeniu oscypka od amerykanina z nad Bałtyku, a wurszty ze słoika dają mi +5 do odporności na nieświeży oddech Pangulara, a suchary dają mi +10 do wytrzymałości. ",
+      "Od 7 lat poluję na Pangulary. Przez lata czajenia się w krzakach zdobyłem niemałe doświadczenie i mnóstwo unikatowych dropów. Chociaż straciłem lewego kciuka i prawą stopę świetnie sobie radzę, mam wyjątkowe skillzy i nieprzerwanie expię. Ostatnio wbiłem nowy level i już nie tracę całego HP po zjedzeniu oscypka od amerykanina z nad Bałtyku, wurszty ze słoika dają mi +5 do odporności na nieświeży oddech Pangulara, a suchary dają mi +10 do wytrzymałości.",
   },
   theme: {
     mainPointer: "text-orange-600",
