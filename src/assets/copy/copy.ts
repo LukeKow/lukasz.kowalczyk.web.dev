@@ -19,7 +19,7 @@ const standard: FunContextTheme = {
   copy: {
     jobTitle: "Web Developer",
     aboutMe:
-      "Z wykształcenia jestem programistą z 7 letnim doświadczeniem. Pracowałem w zespołach polskich oraz mieszanych współpracując z kolegami i koleżankami ze Szwajcarii, USA, UK czy Kanady. Do tej pory pracowałem głównie w React, ale używałem również VUE, Angulara, .NET i Node.js. Interesuję się designem, fotografią, psychologią, rozwojem osobistym i coachingiem. Uważam siebie za osobę kreatywną z poczuciem humoru. Lubię szukać rozwiązań problemów i ulepszać obecne (rozwiązania, nie problemy ;) ).",
+      "Obecnie rozwijam tę stronkę ;) Im więcej w niej robię tym więcej widzę do dodania/poprawienia. Jestem programistą z 7 letnim doświadczeniem. Pracowałem w zespołach polskich oraz mieszanych współpracując z kolegami i koleżankami ze Szwajcarii, USA, UK czy Kanady. Do tej pory pracowałem głównie w React, ale używałem również VUE, Angulara, .NET i Node.js, a wolnych chwilach lubię poprogramować we Flutterze. Interesuję się designem (design tej strony jest w całości zrobiony przeze mnie), fotografią, psychologią, rozwojem osobistym i coachingiem. Uważam siebie za osobę kreatywną z poczuciem humoru. Lubię szukać rozwiązań problemów i ulepszać obecne (rozwiązania, nie problemy ;) ).",
   },
   theme: {
     mainPointer: "text-blue-700",
