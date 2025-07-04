@@ -63,7 +63,7 @@ function App() {
                   textCustomStyle="text-center"
                 />
                 <div
-                  className={`${theme.text} w-fit ml-auto mr-auto mt-10 md:hidden`}
+                  className={`${theme.text} w-fit ml-auto mr-auto mt-5 md:hidden`}
                 >
                   <Toggle
                     onToggle={setFunContext}
