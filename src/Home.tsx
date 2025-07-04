@@ -17,6 +17,7 @@ import { useState } from "react";
 import { FunContext } from "./funContext";
 import { Toggle } from "./components/bottomBar/components/toggle/Toggle";
 import { bottomBarThemeMap } from "./components/bottomBar/BottomBarTypes";
+import { getCopy } from "./assets/copy/copy";
 
 const mainSkills = ["React", "CSS", "Typescript", "VUE", "Javascript"];
 const librariesUsed = [
@@ -38,13 +39,14 @@ const otherExperience = ["Flutter", "React Native", "Angular"];
 
 function App() {
   const [funContext, setFunContext] = useState(false);
+  const { copy, theme } = getCopy(funContext);
 
   return (
     <FunContext value={funContext}>
       <BottomBar onToggleContext={setFunContext} color="white" />
       <div
         id="Home"
-        className="pb-10 pt-5 lg:py-20 flex flex-col lg:items-center bg-blue-700"
+        className={`pb-10 pt-5 lg:py-20 flex flex-col lg:items-center ${theme.bgHome}`}
       >
         <section className="md:bg-white lg:shadow-md lg:max-w-[50%] flex flex-col lg:flex-row md:mx-5 gap-10 lg:gap-0">
           <div className="w-full shadow-md md:shadow-none px-2.5 lg:w-[50%] lg:max-w-[350px] lg:flex lg:flex-col lg:justify-center">
@@ -56,11 +58,13 @@ function App() {
               <div className="flex flex-col justify-center">
                 <Typography text="Łukasz Kowalczyk" fontType="subheader" />
                 <Typography
-                  text="Web Developer"
+                  text={copy.jobTitle}
                   fontType="body"
                   textCustomStyle="text-center"
                 />
-                <div className="text-blue-700 w-fit ml-auto mr-auto mt-10 md:hidden">
+                <div
+                  className={`${theme.text} w-fit ml-auto mr-auto mt-10 md:hidden`}
+                >
                   <Toggle
                     onToggle={setFunContext}
                     toggleTheme={bottomBarThemeMap["white"]}
@@ -68,7 +72,9 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="flex py-5 px-5 gap-5 bg-blue-100 w-full justify-center [&>a]:rounded-xs [&>a]:p-[5px]">
+            <div
+              className={`flex py-5 px-5 gap-5 ${theme.bg} w-full justify-center [&>a]:rounded-xs [&>a]:p-[5px]`}
+            >
               <a
                 href="https://www.instagram.com/lkow.photo/"
                 target="_blank"
@@ -90,7 +96,7 @@ function App() {
                 <SendMessageIcon width="25" height="25" color="white" />
               </a>
               <a
-                href="https://github.com/LukeKow"
+                href="https://github.com/LukeKow?tab=repositories"
                 target="_blank"
                 className="hover:shadow-md"
               >
@@ -101,15 +107,9 @@ function App() {
           <div className="w-full bg-white flex flex-col gap-[30px] py-10 px-5 md:px-5  lg:w-[50%] lg:max-w-[350px]">
             <div className="flex flex-col gap-2.5">
               <Typography fontType="header" text="Cześć" />
-              <Typography
-                fontType="subheader"
-                text="Oto kim jestem i co robię"
-              />
+              <Typography fontType="subheader" text="Kim jestem i co robię" />
             </div>
-            <Typography
-              fontType="body"
-              text="Z wykształcenia jestem programistą z 7 letnim doświadczeniem. Z zainteresowań amatorem fotografii, designu, psychologii i coachingu. Lubię szukać rozwiązań prolemów i ulepszać obecne (rozwiązania, nie problemy ;) )."
-            />
+            <Typography fontType="body" text={copy.aboutMe} />
           </div>
         </section>
       </div>
@@ -118,7 +118,7 @@ function App() {
           <PointerWithText
             fontType="subheader"
             text={"GŁÓWNE UMIEJĘTNOŚCI"}
-            pointerColor="blue"
+            pointerCustomStyle={`${theme.mainPointer}`}
             pointerSize="9px"
           />
         </div>
@@ -131,7 +131,7 @@ function App() {
                 text={mainSkill}
                 pointerSize="5px"
                 fontType="body"
-                pointerColor="blue"
+                pointerCustomStyle={`${theme.mainPointer}`}
               />
             ))}
           </SkillsListContainer>
@@ -143,11 +143,11 @@ function App() {
                 text={library}
                 pointerSize="5px"
                 fontType="body"
-                pointerColor="blue"
+                pointerCustomStyle={`${theme.mainPointer}`}
               />
             ))}
           </SkillsListContainer>
-          <Separator separatorCustomStyle="bg-blue-700 my-10" />
+          <Separator separatorCustomStyle={`${theme.separatorMain} my-10`} />
         </div>
         <div className="hidden md:grid grid-cols-2 gap-y-5">
           <Typography
@@ -167,7 +167,7 @@ function App() {
                 text={mainSkill}
                 pointerSize="5px"
                 fontType="body"
-                pointerColor="blue"
+                pointerCustomStyle={`${theme.mainPointer}`}
               />
             ))}
           </SkillsListContainer>
@@ -179,19 +179,21 @@ function App() {
                 text={library}
                 pointerSize="5px"
                 fontType="body"
-                pointerColor="blue"
+                pointerCustomStyle={`${theme.mainPointer}`}
               />
             ))}
           </SkillsListContainer>
         </div>
-        <Separator separatorCustomStyle="hidden md:block bg-blue-700 my-10 md:w-[25%]" />
+        <Separator
+          separatorCustomStyle={`hidden md:block ${theme.separatorMain} my-10 md:w-[25%]`}
+        />
       </Container>
       <Container bgColor="none" className="mb-[80px] md:mb-0 shadow-md">
         <PointerWithText
           fontType="subheader"
           text={"POZOSTAŁE UMIEJĘTNOŚCI"}
           pointerColor="custom"
-          pointerCustomStyle="text-blue-400"
+          pointerCustomStyle={`${theme.sidePointer}`}
           pointerSize="9px"
         />
         <div className="flex md:hidden flex-col">
@@ -207,15 +209,15 @@ function App() {
                 text={skill}
                 pointerSize="5px"
                 fontType="body"
-                pointerCustomStyle="text-blue-400"
+                pointerCustomStyle={`${theme.sidePointer}`}
               />
             ))}
           </SkillsListContainer>
-          <Separator separatorCustomStyle="bg-blue-400 my-10" />
+          <Separator separatorCustomStyle={`${theme.separatorSide} my-10`} />
           <PointerWithText
             fontType="subheader"
             text={"POZOSTAŁE DOŚWIADCZENIE"}
-            pointerCustomStyle="text-blue-200"
+            pointerCustomStyle={`${theme.otherPointer}`}
           />
           <SkillsListContainer>
             {otherExperience.map((skill, index) => (
@@ -225,7 +227,7 @@ function App() {
                 pointerSize="5px"
                 fontType="body"
                 pointerColor="custom"
-                pointerCustomStyle="text-blue-200"
+                pointerCustomStyle={`${theme.otherPointer}`}
               />
             ))}
           </SkillsListContainer>
@@ -248,7 +250,7 @@ function App() {
                 text={skill}
                 pointerSize="5px"
                 fontType="body"
-                pointerCustomStyle="text-blue-400"
+                pointerCustomStyle={`${theme.sidePointer}`}
               />
             ))}
           </SkillsListContainer>
@@ -260,7 +262,7 @@ function App() {
                 text={skill}
                 pointerSize="5px"
                 fontType="body"
-                pointerCustomStyle="text-blue-400"
+                pointerCustomStyle={`${theme.sidePointer}`}
               />
             ))}
           </SkillsListContainer>

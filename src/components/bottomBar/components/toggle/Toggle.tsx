@@ -36,7 +36,7 @@ export const Toggle = ({ onToggle, toggleTheme }: ToggleProps) => {
           />
         </span>
       </label>
-      <span className="select-none hidden peer-hover:absolute peer-hover:inline -top-5 left-0 whitespace-nowrap">
+      <span className="select-none text-blue-900 font-extralight hidden peer-hover:absolute peer-hover:inline -top-6 left-0 whitespace-nowrap">
         Zmień styl
       </span>
     </div>

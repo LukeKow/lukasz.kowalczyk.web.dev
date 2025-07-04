@@ -2,8 +2,8 @@
 @import "tailwindcss";
 
 @layer utilities {
-  .pb-safe {
-    padding-bottom: env(safe-area-inset-bottom);
+  .mb-safe {
+    margin-bottom: env(safe-area-inset-bottom);
   }
 }
 
@@ -48,22 +48,6 @@
   --color-brown-900: #030302;
   --default-font-family: "Fira Sans", sans-serif;
   --tw-duration: 5;
-  --bg-lr-blue-gradient: linear-gradient(
-    90deg,
-    var(--color-blue-200) 0%,
-    var(--color-blue-200) 40%,
-    #ffffff 35%,
-    #ffffff 100%
-  );
-  --bg-tb-blue-gradient: linear-gradient(
-    180deg,
-    #fff 0%,
-    #fff 10%,
-    var(--color-blue-200) 10%,
-    var(--color-blue-200) 85%,
-    #fff 85%,
-    #fff 100%
-  );
 }
 
 .bottom-bar-gradient {
