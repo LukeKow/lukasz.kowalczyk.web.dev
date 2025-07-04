@@ -49,7 +49,7 @@ function App() {
         className={`pb-10 pt-5 lg:py-20 flex flex-col lg:items-center ${theme.bgHome}`}
       >
         <section className="md:bg-white lg:shadow-md lg:max-w-[50%] flex flex-col lg:flex-row md:mx-5 gap-10 lg:gap-0">
-          <div className="w-full shadow-md md:shadow-none px-2.5 lg:w-[50%] lg:max-w-[350px] lg:flex lg:flex-col lg:justify-center">
+          <div className="w-full shadow-md md:shadow-none px-2.5 lg:w-[50%] lg:max-w-[350px] lg:flex lg:flex-col">
             <div className="py-5 px-2.5 md:px-5 flex flex-col items-center justify-center gap-5 bg-white w-full">
               <img
                 src={funContext ? happyMe : me}
@@ -104,7 +104,7 @@ function App() {
               </a>
             </div>
           </div>
-          <div className="w-full bg-white flex flex-col gap-[30px] py-10 px-5 md:px-5  lg:w-[50%] lg:max-w-[350px]">
+          <div className="w-full bg-white flex flex-col gap-[30px] py-5 px-5 md:px-5  lg:w-[65%] lg:max-w-[400px]">
             <div className="flex flex-col gap-2.5">
               <Typography fontType="header" text="Cześć" />
               <Typography fontType="subheader" text="Kim jestem i co robię" />

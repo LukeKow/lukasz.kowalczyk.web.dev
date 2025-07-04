@@ -1,8 +1,7 @@
 const fun: FunContextTheme = {
   copy: {
     jobTitle: "Pangular hunter",
-    aboutMe:
-      "Od 7 lat poluję na Pangulary. Przez lata czajenia się w krzakach zdobyłem niemałe doświadczenie i mnóstwo unikatowych dropów. Chociaż straciłem lewego kciuka i prawą stopę świetnie sobie radzę, mam wyjątkowe skillzy i nieprzerwanie expię. Ostatnio wbiłem nowy level i już nie tracę całego HP po zjedzeniu oscypka od amerykanina z nad Bałtyku, wurszty ze słoika dają mi +5 do odporności na nieświeży oddech Pangulara, a suchary dają mi +10 do wytrzymałości.",
+    aboutMe: `Od 7 lat poluję na Pangulary. Przez lata czajenia się w krzakach zdobyłem niemałe doświadczenie i mnóstwo unikatowych dropów (nooo w krzakach były...). Chociaż straciłem lewego kciuka i prawą stopę świetnie sobie radzę, mam wyjątkowe skillzy i nieprzerwanie expię. Ostatnio wbiłem nowy level i już nie tracę całego HP po zjedzeniu oscypka od amerykanina z nad Bałtyku, wurszty ze słoika dają mi +5 do odporności na nieświeży oddech Pangulara, a suchary +10 do wytrzymałości.`,
   },
   theme: {
     mainPointer: "text-orange-600",
@@ -20,7 +19,7 @@ const standard: FunContextTheme = {
   copy: {
     jobTitle: "Web Developer",
     aboutMe:
-      "Z wykształcenia jestem programistą z 7 letnim doświadczeniem. Pracowałem w zespołach polskich oraz mieszanych współpracując z kolegami i koleżankami ze Szwajcarii, USA, UK czy Kanady. Do tej pory pracowałem głównie w React, ale używałem również VUE, Angulara, .NET i Node.js. Interesuję się designem, fotografią, psychologią, rozwojem osobistym i coachingiem. Uważam siebie za osobą kreatywną z poczuciem humoru. Lubię szukać rozwiązań problemów i ulepszać obecne (rozwiązania, nie problemy ;) ).",
+      "Z wykształcenia jestem programistą z 7 letnim doświadczeniem. Pracowałem w zespołach polskich oraz mieszanych współpracując z kolegami i koleżankami ze Szwajcarii, USA, UK czy Kanady. Do tej pory pracowałem głównie w React, ale używałem również VUE, Angulara, .NET i Node.js. Interesuję się designem, fotografią, psychologią, rozwojem osobistym i coachingiem. Uważam siebie za osobę kreatywną z poczuciem humoru. Lubię szukać rozwiązań problemów i ulepszać obecne (rozwiązania, nie problemy ;) ).",
   },
   theme: {
     mainPointer: "text-blue-700",
