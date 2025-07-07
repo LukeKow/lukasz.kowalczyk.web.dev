@@ -48,9 +48,9 @@ function App() {
         id="Home"
         className={`pb-10 pt-5 lg:py-20 flex flex-col lg:items-center ${theme.bgHome}`}
       >
-        <section className="md:bg-white lg:shadow-md lg:max-w-[50%] flex flex-col lg:flex-row md:mx-5 gap-10 lg:gap-0">
+        <section className="md:bg-white lg:shadow-md lg:max-w-[50%] md:max-h-[500px] py-5 flex flex-col lg:flex-row md:mx-5 gap-10 lg:gap-0">
           <div className="w-full shadow-md md:shadow-none px-2.5 lg:w-[50%] lg:max-w-[350px] lg:flex lg:flex-col">
-            <div className="py-5 px-2.5 md:px-5 flex flex-col items-center justify-center gap-5 bg-white w-full">
+            <div className="px-2.5 md:px-5 flex flex-col items-center justify-center gap-5 bg-white w-full">
               <img
                 src={funContext ? happyMe : me}
                 className="w-full max-w-[385px]"
@@ -104,12 +104,12 @@ function App() {
               </a>
             </div>
           </div>
-          <div className="w-full bg-white flex flex-col gap-[30px] py-5 px-5 md:px-5  lg:w-[65%] lg:max-w-[400px]">
+          <div className="w-full overflow-y-scroll bg-white flex flex-col gap-[30px] px-5 md:px-5  lg:w-[65%] lg:max-w-[400px]">
             <div className="flex flex-col gap-2.5">
               <Typography fontType="header" text="Cześć" />
               <Typography fontType="subheader" text="Kim jestem i co robię" />
             </div>
-            <Typography fontType="body" text={copy.aboutMe} />
+            <Typography fontType="body" text={copy.aboutMe} textAsHtml={true} />
           </div>
         </section>
       </div>

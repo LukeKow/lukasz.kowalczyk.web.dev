@@ -10,6 +10,7 @@ export interface TypographyProps {
   text: string;
   fontType: FontType;
   textCustomStyle?: string;
+  textAsHtml?: boolean;
 }
 
 export const fontTypeMap: Record<FontType, string> = {

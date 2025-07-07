@@ -1,25 +1,8 @@
-const fun: FunContextTheme = {
-  copy: {
-    jobTitle: "Pangular hunter",
-    aboutMe: `Od 7 lat poluję na Pangulary. Przez lata czajenia się w krzakach zdobyłem niemałe doświadczenie i mnóstwo unikatowych dropów (nooo w krzakach były...). Chociaż straciłem lewego kciuka i prawą stopę świetnie sobie radzę, mam wyjątkowe skillzy i nieprzerwanie expię. Ostatnio wbiłem nowy level i już nie tracę całego HP po zjedzeniu oscypka od amerykanina z nad Bałtyku, wurszty ze słoika dają mi +5 do odporności na nieświeży oddech Pangulara, a suchary +10 do wytrzymałości.`,
-  },
-  theme: {
-    mainPointer: "text-orange-600",
-    sidePointer: "text-orange-400",
-    otherPointer: "text-orange-200",
-    separatorMain: "bg-orange-600",
-    separatorSide: "bg-orange-400",
-    bg: "bg-orange-100",
-    bgHome: "bg-orange-600",
-    text: "text-orange-900",
-  },
-};
-
 const standard: FunContextTheme = {
   copy: {
     jobTitle: "Web Developer",
     aboutMe:
-      "Obecnie rozwijam tę stronkę ;) Im więcej w niej robię tym więcej widzę do dodania/poprawienia. Jestem programistą z 7 letnim doświadczeniem. Pracowałem w zespołach polskich oraz mieszanych współpracując z kolegami i koleżankami ze Szwajcarii, USA, UK czy Kanady. Do tej pory pracowałem głównie w React, ale używałem również VUE, Angulara, .NET i Node.js, a wolnych chwilach lubię poprogramować we Flutterze. Interesuję się designem (design tej strony jest w całości zrobiony przeze mnie), fotografią, psychologią, rozwojem osobistym i coachingiem. Uważam siebie za osobę kreatywną z poczuciem humoru. Lubię szukać rozwiązań problemów i ulepszać obecne (rozwiązania, nie problemy ;) ).",
+      "<span><p>Obecnie rozwijam tę stronkę i szukam pracy. Im więcej nad nią pracuję tym więcej widzę do dodania czy poprawienia - nie wiem czy kiedyś nadejdzie dzień kiedy stwierdzę, że skończyłem XD</p></br><p>Jestem programistą z siedmio letnim doświadczeniem. Pracowałem w zespołach polskich oraz mieszanych współpracując z kolegami i koleżankami między innymi ze Szwajcarii, USA, UK czy Kanady. Do tej pory pracowałem głównie w React, ale używałem również VUE, Angulara, .NET, React Native i Node.js. Kiedy programowałem z użyciem Javyscript niemal zawsze używaliśmy w projekcie Typescripta. Bardzo chciałbym zapomnieć te, w których nie używaliśmy TS’a... Jakiś czas temu bardzo spodobał mi się Flutter i w wolnych chwilach klepię trochę kodu właśnie we Flutterze.</p></br><p>Interesuję się designem (design tej strony jest w całości zrobiony przeze mnie) - wciągają mnie designerskie niuanse: to jak wszystko ma swój cel, sens i wpływ na użytkownika. Dodatkowo programowanie tego co sam zaprojektowałem daje mi jeszcze więcej frajdy. Chociaż muszę szczerze przyznać, że w trakcie rozwoju projektu trudno jest przypilnować aby jedno i drugie było ze sobą zsynchronizowane - czasami palce po prostu klepią kod, a design czeka na zaktualizowanie... XD</p></br><p>Jestem osobą kreatywną i lubię tworzyć - robię zdjęcia i czasem nawet jakieś wrzucę na Instagrama. Kiedyś miałem się za skostniałego introwertyka ale od jakiegoś czasu brakuje mi interakcji z ludźmi. Zauważyłem, że dużo lepiej pracuje mi się gdy mam częstszy kontakt z zespołem twarzą w twarz.</p></br><p>Jak wspomniałem na początku stronka jest w trakcie rozwoju i mam świadomość pewnych braków (w kodzie i w designie) co obiecuję w miarę upływu czasu uzupełniać.</p></br><p>Aaa, oczywiście serdecznie zapraszam do kontaktu jeśli akurat szukasz developera... ;)</span>",
   },
   theme: {
     mainPointer: "text-blue-700",
@@ -30,6 +13,24 @@ const standard: FunContextTheme = {
     bg: "bg-blue-100",
     bgHome: "bg-blue-700",
     text: "tex-blue-900",
+  },
+};
+
+const fun: FunContextTheme = {
+  copy: {
+    jobTitle: "Pangular hunter",
+    aboutMe:
+      "<span><p>Obecnie rozwijam tę stronkę i szukam pracy. Im więcej nad nią pracuję tym więcej widzę do dodania czy poprawienia - nie wiem czy kiedyś nadejdzie dzień kiedy stwierdzę, że skończyłem XD</p></br><p>Jestem programistą z siedmio letnim doświadczeniem. Pracowałem w zespołach polskich oraz mieszanych współpracując z kolegami i koleżankami między innymi ze Szwajcarii, USA, UK czy Kanady. Do tej pory pracowałem głównie w React, ale używałem również VUE, Angulara, .NET, React Native i Node.js. Kiedy programowałem z użyciem Javyscript niemal zawsze używaliśmy w projekcie Typescripta. Bardzo chciałbym zapomnieć te, w których nie używaliśmy TS’a... Jakiś czas temu bardzo spodobał mi się Flutter i w wolnych chwilach klepię trochę kodu właśnie we Flutterze.</p></br><p>Interesuję się designem (design tej strony jest w całości zrobiony przeze mnie) - wciągają mnie designerskie niuanse: to jak wszystko ma swój cel, sens i wpływ na użytkownika. Dodatkowo programowanie tego co sam zaprojektowałem daje mi jeszcze więcej frajdy. Chociaż muszę szczerze przyznać, że w trakcie rozwoju projektu trudno jest przypilnować aby jedno i drugie było ze sobą zsynchronizowane - czasami palce po prostu klepią kod, a design czeka na zaktualizowanie... XD</p></br><p>Jestem osobą kreatywną i lubię tworzyć - robię zdjęcia i czasem nawet jakieś wrzucę na Instagrama. Kiedyś miałem się za skostniałego introwertyka ale od jakiegoś czasu brakuje mi interakcji z ludźmi. Zauważyłem, że dużo lepiej pracuje mi się gdy mam częstszy kontakt z zespołem twarzą w twarz.</p></br><p>Jak wspomniałem na początku stronka jest w trakcie rozwoju i mam świadomość pewnych braków (w kodzie i w designie) co obiecuję w miarę upływu czasu uzupełniać ;)</p></br><p> Aaa, oczywiście serdecznie zapraszam do kontaktu jeśli akurat szukasz developera... ;)</span>",
+  },
+  theme: {
+    mainPointer: "text-orange-600",
+    sidePointer: "text-orange-400",
+    otherPointer: "text-orange-200",
+    separatorMain: "bg-orange-600",
+    separatorSide: "bg-orange-400",
+    bg: "bg-orange-100",
+    bgHome: "bg-orange-600",
+    text: "text-orange-900",
   },
 };
 
