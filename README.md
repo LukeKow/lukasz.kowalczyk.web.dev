@@ -1,3 +1,10 @@
+Hej!
+Projekt jest w fazie rozwoju. Póki zrobiłem ile mogłem z dziećmi na głowie i ciągle wydzwaniającą ex i urzędem skarbowym... XD
+
+A tak poważnie, to stronkę cały czas rozwijam, chcę dodać animacje, scroll buttona, poprawić opisy istniejących prjektów i dodać kolejne. Planuję zrobić theme z tailwindem - mam pomysł na alternatywną, bardziej na luzie i humorystyczną wersję strony uruchamianą togglem i będącą w trochę innej kolorystyce. Chcę posprzątać kod bo trochę zrobił mi się bajzel, sprawdzić stories i zsynchronizować stan faktyczny apki z designem i na odwrót. Zanim zacznę dodawać nowe rzeczy najpierw chcę je zaprojektować - sporo pracy :)
+
+Plik z designem dodałem do repo.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
