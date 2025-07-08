@@ -3,7 +3,7 @@ Projekt jest w fazie rozwoju. Póki zrobiłem ile mogłem z dziećmi na głowie 
 
 A tak poważnie, to stronkę cały czas rozwijam, chcę dodać animacje, scroll buttona, poprawić opisy istniejących prjektów i dodać kolejne. Planuję zrobić theme z tailwindem - mam pomysł na alternatywną, bardziej na luzie i humorystyczną wersję strony uruchamianą togglem i będącą w trochę innej kolorystyce. Chcę posprzątać kod bo trochę zrobił mi się bajzel, sprawdzić stories i zsynchronizować stan faktyczny apki z designem i na odwrót. Zanim zacznę dodawać nowe rzeczy najpierw chcę je zaprojektować - sporo pracy :)
 
-Plik z designem dodałem do repo.
+[Link do designu](https://www.figma.com/team_invite/redeem/SlKfPaeo79vTfVj3wvBM2g)
 
 # React + TypeScript + Vite
 
