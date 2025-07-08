@@ -27,8 +27,9 @@ export const BottomBar = ({ color, onToggleContext }: BottomBarProps) => {
             <Typography text="Projects" fontType="thinSubHeader" />
           </NavLink>
         </div>
+        {/* TODO make it visible when the fun part of copy is ready */}
         {onToggleContext && (
-          <div className={`${bottomBarTheme.accent} h-fit`}>
+          <div className={`${bottomBarTheme.accent} h-fit hidden`}>
             <Toggle onToggle={onToggleContext} toggleTheme={bottomBarTheme} />
           </div>
         )}

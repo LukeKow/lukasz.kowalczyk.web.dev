@@ -62,8 +62,9 @@ function App() {
                   fontType="body"
                   textCustomStyle="text-center"
                 />
+                {/* TODO make it visible when the fun part of copy is ready */}
                 <div
-                  className={`${theme.text} w-fit ml-auto mr-auto mt-5 md:hidden`}
+                  className={`${theme.text} hidden w-fit ml-auto mr-auto mt-5 md:hidden`}
                 >
                   <Toggle
                     onToggle={setFunContext}
