@@ -21,7 +21,7 @@ export const NotSoSeriousMood = ({
         r="12.5"
         transform="rotate(180 13.5 13.5)"
         stroke="currentColor"
-        stroke-width="2"
+        strokeWidth="2"
       />
       <circle
         cx="13.5"
@@ -29,7 +29,7 @@ export const NotSoSeriousMood = ({
         r="12.5"
         transform="rotate(180 13.5 13.5)"
         stroke="currentColor"
-        stroke-width="2"
+        strokeWidth="2"
       />
       <circle
         cx="18.5"
@@ -48,14 +48,14 @@ export const NotSoSeriousMood = ({
       <path
         d="M22 12C22 12 18.5 5 14 5C9.5 5 5 12 5 12"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeLinecap="round"
       />
       <path
         d="M22 12C22 12 15.65 10 14 10C12.35 10 5 12 5 12"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeLinecap="round"
       />
     </svg>
   );

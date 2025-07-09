@@ -4,8 +4,16 @@ import { cardThemeColorMap } from "./CardTypes";
 import { DetailsIcon } from "../../../shared/icons";
 import { Link } from "react-router";
 import { type ProjectDetailsProps as ProjectDetailsData } from "../Project/ProjectDetailsTypes";
+const BASE_URL = import.meta.env.VITE_API_URL;
+
 export const Card = (props: ProjectDetailsData) => {
-  const { title, description, role, theme: color, imgSrc } = props;
+  const {
+    title,
+    myRoleDescription: description,
+    myRoleName: role,
+    theme: color,
+    image: imgSrc,
+  } = props;
   const cardTheme = cardThemeColorMap[color];
   return (
     <div
@@ -50,7 +58,7 @@ export const Card = (props: ProjectDetailsData) => {
         </Link>
       </div>
       <div className="mt-5">
-        <img src={imgSrc} />
+        <img src={`${BASE_URL}${imgSrc.url}`} />
       </div>
     </div>
   );

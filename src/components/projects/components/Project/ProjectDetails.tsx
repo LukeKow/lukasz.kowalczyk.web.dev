@@ -8,11 +8,22 @@ import { Separator } from "../../../shared/separator/Separator";
 import { BottomBar } from "../../../bottomBar/BottomBar";
 import { useLocation } from "react-router";
 
-export const ProjectDetails = () => {
-  const { title, description, role, theme, imgSrc, tools, whatIWasDoing } =
-    useLocation().state.projectDetails as ProjectDetailsProps;
+const BASE_URL = import.meta.env.VITE_API_URL;
 
+export const ProjectDetails = () => {
+  const {
+    title,
+    myRoleDescription: description,
+    myRoleName: role,
+    theme,
+    image: imgSrc,
+    toolsUsed: tools,
+    myRoleDescription: whatIWasDoing,
+  } = useLocation().state.projectDetails as ProjectDetailsProps;
+
+  console.log("IMG: ", imgSrc);
   const cardTheme = projectThemeColorMap[theme];
+
   return (
     <>
       <BottomBar color={cardTheme.topBarTheme} />
@@ -37,7 +48,7 @@ export const ProjectDetails = () => {
               />
             </div>
             <div className="mt-5 mb-10">
-              <img src={imgSrc} />
+              <img src={`${BASE_URL}${imgSrc.url}`} />
             </div>
             <div className="flex flex-col gap-5 pt-5 px-5 pb-5">
               <Typography

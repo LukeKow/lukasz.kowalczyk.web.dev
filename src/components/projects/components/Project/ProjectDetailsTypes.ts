@@ -3,11 +3,11 @@ import type { MainTheme } from "../../../shared/SharedTypes";
 export interface ProjectDetailsProps {
   theme: MainTheme;
   title: string;
-  role: string;
+  myRoleName: string;
   description: string;
-  whatIWasDoing: string;
-  tools: string[];
-  imgSrc: string;
+  myRoleDescription: string;
+  toolsUsed: string[];
+  image: { url: string };
 }
 
 type ProjectTheme = {

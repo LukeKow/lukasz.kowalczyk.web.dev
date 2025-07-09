@@ -19,14 +19,14 @@ export const StandardMoodIcon = ({
         cy="13.5"
         r="12.5"
         stroke="currentColor"
-        stroke-width="2"
+        strokeWidth="2"
       />
       <circle
         cx="13.5"
         cy="13.5"
         r="12.5"
         stroke="currentColor"
-        stroke-width="2"
+        strokeWidth="2"
       />
       <circle cx="9" cy="10" r="2.5" stroke="currentColor" />
       <circle cx="18" cy="10" r="2.5" stroke="currentColor" />
@@ -39,8 +39,8 @@ export const StandardMoodIcon = ({
       <path
         d="M8 19C8 19 11.85 22 13.5 22C15.15 22 19 19 19 19"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeLinecap="round"
       />
     </svg>
   );
