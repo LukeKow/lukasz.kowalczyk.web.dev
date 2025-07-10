@@ -8,6 +8,7 @@ export interface ProjectDetailsProps {
   myRoleDescription: string;
   toolsUsed: string[];
   image: { url: string };
+  imageAuthor?: string;
 }
 
 type ProjectTheme = {

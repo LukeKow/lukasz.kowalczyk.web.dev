@@ -19,6 +19,7 @@ export const ProjectDetails = () => {
     image: imgSrc,
     toolsUsed: tools,
     myRoleDescription: whatIWasDoing,
+    imageAuthor,
   } = useLocation().state.projectDetails as ProjectDetailsProps;
 
   const cardTheme = projectThemeColorMap[theme];
@@ -47,7 +48,7 @@ export const ProjectDetails = () => {
               />
             </div>
             <div className="mt-5 mb-10">
-              <img src={`${BASE_URL}${imgSrc.url}`} />
+              <img src={`${BASE_URL}${imgSrc.url}`} alt={imageAuthor} />
             </div>
             <div className="flex flex-col gap-5 pt-5 px-5 pb-5">
               <Typography
