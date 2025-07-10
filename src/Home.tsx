@@ -1,23 +1,22 @@
+import { useState } from "react";
+
 import { BottomBar } from "./components/bottomBar/BottomBar";
 import { Container } from "./components/shared/container/Container";
 import { PointerWithText } from "./components/shared/pointerWithText/PointerWithText";
 import { Separator } from "./components/shared/separator/Separator";
 import { SkillsListContainer } from "./components/shared/skillsListContainer/SkillsListContainer";
 import { Typography } from "./components/shared/typography/Typography";
-
 import { GithubIcon } from "./components/shared/icons/GitHubIcon";
 import { InstagramIcon } from "./components/shared/icons/InstagramIcon";
 import { LinkedInIcon } from "./components/shared/icons/LinkedInIcon";
 import { SendMessageIcon } from "./components/shared/icons/SendMessageIcon";
+import { Toggle } from "./components/bottomBar/components/toggle/Toggle";
+import { FunContext } from "./funContext";
+import { bottomBarThemeMap } from "./components/bottomBar/BottomBarTypes";
 
+import { getCopy } from "./assets/copy/copy";
 import me from "./assets/images/me_2.jpg";
 import happyMe from "./assets/images/me.jpeg";
-
-import { useState } from "react";
-import { FunContext } from "./funContext";
-import { Toggle } from "./components/bottomBar/components/toggle/Toggle";
-import { bottomBarThemeMap } from "./components/bottomBar/BottomBarTypes";
-import { getCopy } from "./assets/copy/copy";
 
 const mainSkills = ["React", "CSS", "Typescript", "VUE", "Javascript"];
 const librariesUsed = [

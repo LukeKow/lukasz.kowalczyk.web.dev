@@ -1,9 +1,12 @@
+import { Link } from "react-router";
+import parse from "html-react-parser";
+
 import { PointerWithText } from "../../../shared/pointerWithText/PointerWithText";
 import { Typography } from "../../../shared/typography/Typography";
 import { cardThemeColorMap } from "./CardTypes";
 import { DetailsIcon } from "../../../shared/icons";
-import { Link } from "react-router";
 import { type ProjectDetailsProps as ProjectDetailsData } from "../Project/ProjectDetailsTypes";
+
 const BASE_URL = import.meta.env.VITE_IMG_BASE_URL;
 export const Card = (props: ProjectDetailsData) => {
   const {
@@ -58,7 +61,8 @@ export const Card = (props: ProjectDetailsData) => {
         </Link>
       </div>
       <div className="mt-5">
-        <img src={`${BASE_URL}${imgSrc.url}`} alt={imageAuthor} />
+        <img src={`${BASE_URL}${imgSrc.url}`} />
+        <div className="h-0 w-0 invisible">{parse(imageAuthor || "")}</div>
       </div>
     </div>
   );
