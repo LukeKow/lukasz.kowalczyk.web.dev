@@ -4,8 +4,7 @@ import { cardThemeColorMap } from "./CardTypes";
 import { DetailsIcon } from "../../../shared/icons";
 import { Link } from "react-router";
 import { type ProjectDetailsProps as ProjectDetailsData } from "../Project/ProjectDetailsTypes";
-const BASE_URL = import.meta.env.VITE_API_URL;
-
+const BASE_URL = import.meta.env.VITE_IMG_BASE_URL;
 export const Card = (props: ProjectDetailsData) => {
   const {
     title,

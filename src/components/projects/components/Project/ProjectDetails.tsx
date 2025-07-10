@@ -8,7 +8,7 @@ import { Separator } from "../../../shared/separator/Separator";
 import { BottomBar } from "../../../bottomBar/BottomBar";
 import { useLocation } from "react-router";
 
-const BASE_URL = import.meta.env.VITE_API_URL;
+const BASE_URL = import.meta.env.VITE_IMG_BASE_URL;
 
 export const ProjectDetails = () => {
   const {
@@ -21,7 +21,6 @@ export const ProjectDetails = () => {
     myRoleDescription: whatIWasDoing,
   } = useLocation().state.projectDetails as ProjectDetailsProps;
 
-  console.log("IMG: ", imgSrc);
   const cardTheme = projectThemeColorMap[theme];
 
   return (
