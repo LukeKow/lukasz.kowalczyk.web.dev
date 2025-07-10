@@ -12,6 +12,7 @@ export const Card = (props: ProjectDetailsData) => {
     myRoleName: role,
     theme: color,
     image: imgSrc,
+    imageAuthor,
   } = props;
   const cardTheme = cardThemeColorMap[color];
   return (
@@ -57,7 +58,7 @@ export const Card = (props: ProjectDetailsData) => {
         </Link>
       </div>
       <div className="mt-5">
-        <img src={`${BASE_URL}${imgSrc.url}`} />
+        <img src={`${BASE_URL}${imgSrc.url}`} alt={imageAuthor} />
       </div>
     </div>
   );
