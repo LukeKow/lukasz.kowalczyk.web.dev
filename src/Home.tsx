@@ -53,7 +53,7 @@ function App() {
       >
         <section className="md:bg-white lg:shadow-md lg:max-w-[50%] md:max-h-[500px] py-5 flex flex-col lg:flex-row md:mx-5 gap-10 lg:gap-0">
           <div className="w-full shadow-md md:shadow-none px-2.5 lg:w-[50%] lg:max-w-[350px] lg:flex lg:flex-col">
-            <div className="px-2.5 md:px-5 flex flex-col items-center justify-center gap-5 bg-white w-full">
+            <div className="px-2.5 pt-5 lg:pt-0 md:px-5 flex flex-col items-center justify-center gap-5 bg-white w-full">
               <img
                 src={funContext ? happyMe : me}
                 className="w-full max-w-[385px]"
@@ -116,8 +116,8 @@ function App() {
               </a>
             </div>
           </div>
-          <div className="w-full overflow-y-scroll bg-white flex flex-col gap-[15px] px-5 md:px-5  lg:w-[65%] lg:max-w-[400px]">
-            <div className="flex flex-col gap-2.5">
+          <div className="w-full overflow-y-scroll bg-white flex flex-col gap-[15px] px-5 md:px-5 lg:w-[65%] lg:max-w-[400px]">
+            <div className="mt-5 flex flex-col gap-2.5">
               <Typography
                 fontType="subheader"
                 text="Trochę o tym kim jestem i co robię"
