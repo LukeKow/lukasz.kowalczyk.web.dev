@@ -24,7 +24,7 @@ export const BottomBar = ({ color, onToggleContext }: BottomBarProps) => {
             to={"/projects"}
             className="px-2.5 py-2.5 gap-2.5 hover:underline underline-offset-4"
           >
-            <Typography text="Projects" fontType="thinSubHeader" />
+            <Typography text="Projekty" fontType="thinSubHeader" />
           </NavLink>
         </div>
         {/* TODO make it visible when the fun part of copy is ready */}

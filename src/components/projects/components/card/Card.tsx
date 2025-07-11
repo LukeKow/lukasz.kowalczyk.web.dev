@@ -55,7 +55,7 @@ export const Card = (props: ProjectDetailsData) => {
 						hover:[&>svg]:[&>rect]:nth-2:translate-[0px]
 					`}
           >
-            <span className={`${cardTheme.text}`}>Details</span>
+            <span className={`${cardTheme.text}`}>Szczegóły</span>
             <DetailsIcon width="25" height="25" />
           </button>
         </Link>
