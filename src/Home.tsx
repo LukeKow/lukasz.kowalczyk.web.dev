@@ -20,7 +20,6 @@ import happyMe from "./assets/images/me.jpeg";
 import { DownloadCvIcon } from "./components/shared/icons/DownloadCvIcon";
 
 const CV_DOWNLOAD_URL = import.meta.env.VITE_CV_DOWNLOAD_URL;
-console.log("CV_DOWNLOAD_URL: ", CV_DOWNLOAD_URL);
 
 const mainSkills = ["React", "CSS", "Typescript", "VUE", "Javascript"];
 const librariesUsed = [

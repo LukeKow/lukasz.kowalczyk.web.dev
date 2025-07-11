@@ -6,7 +6,6 @@ import { useProjects } from "./useProjects";
 
 export const Projects = () => {
   const { fetching, projects } = useProjects();
-  console.log(projects);
   return (
     <>
       <BottomBar color="blue" />
