@@ -54,10 +54,16 @@ function App() {
         <section className="md:bg-white lg:shadow-md lg:max-w-[50%] md:max-h-[500px] py-5 flex flex-col lg:flex-row md:mx-5 gap-10 lg:gap-0">
           <div className="w-full shadow-md md:shadow-none px-2.5 lg:w-[50%] lg:max-w-[350px] lg:flex lg:flex-col">
             <div className="px-2.5 pt-5 lg:pt-0 md:px-5 flex flex-col items-center justify-center gap-5 bg-white w-full">
-              <img
-                src={funContext ? happyMe : me}
-                className="w-full max-w-[385px]"
-              />
+              <div className="group min-h-[253px]">
+                <img
+                  src={me}
+                  className="w-full max-w-[385px] group-hover:hidden"
+                />
+                <img
+                  src={happyMe}
+                  className="w-full min-w-[253px] max-w-[385px] hidden group-hover:inline"
+                />
+              </div>
               <div className="flex flex-col justify-center">
                 <Typography text="Łukasz Kowalczyk" fontType="subheader" />
                 <Typography
