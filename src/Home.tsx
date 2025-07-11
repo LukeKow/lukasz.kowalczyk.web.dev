@@ -17,6 +17,10 @@ import { bottomBarThemeMap } from "./components/bottomBar/BottomBarTypes";
 import { getCopy } from "./assets/copy/copy";
 import me from "./assets/images/me_2.jpg";
 import happyMe from "./assets/images/me.jpeg";
+import { DownloadCvIcon } from "./components/shared/icons/DownloadCvIcon";
+
+const CV_DOWNLOAD_URL = import.meta.env.VITE_CV_DOWNLOAD_URL;
+console.log("CV_DOWNLOAD_URL: ", CV_DOWNLOAD_URL);
 
 const mainSkills = ["React", "CSS", "Typescript", "VUE", "Javascript"];
 const librariesUsed = [
@@ -102,12 +106,22 @@ function App() {
               >
                 <GithubIcon width="25" height="25" color="white" />
               </a>
+              <a
+                href={CV_DOWNLOAD_URL}
+                target="_blank"
+                download
+                className="hover:shadow-md bg-white"
+              >
+                <DownloadCvIcon width="25" height="25" color="white" />
+              </a>
             </div>
           </div>
-          <div className="w-full overflow-y-scroll bg-white flex flex-col gap-[30px] px-5 md:px-5  lg:w-[65%] lg:max-w-[400px]">
+          <div className="w-full overflow-y-scroll bg-white flex flex-col gap-[15px] px-5 md:px-5  lg:w-[65%] lg:max-w-[400px]">
             <div className="flex flex-col gap-2.5">
-              <Typography fontType="header" text="Cześć" />
-              <Typography fontType="subheader" text="Kim jestem i co robię" />
+              <Typography
+                fontType="subheader"
+                text="Trochę o tym kim jestem i co robię"
+              />
             </div>
             <Typography fontType="body" text={copy.aboutMe} textAsHtml={true} />
           </div>
